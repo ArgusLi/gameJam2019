@@ -40,6 +40,10 @@ public class GamePowerup : MonoBehaviour
            renderer.sprite = sprites[i];
            Rigidbody2D rb = powerup.AddComponent<Rigidbody2D>();
            rb.freezeRotation = true;
+           rb.isKinematic = true;
+
+           rb.velocity = new Vector2(0, 3);
+
            powerup.AddComponent<PolygonCollider2D>();
            
            powerups[i] = powerup;
@@ -52,7 +56,7 @@ public class GamePowerup : MonoBehaviour
     void Update()
     {
         for (int i = 0; i < numPowerups; i++) {
-            rbs[i].velocity = new Vector2(0, 3);
+            // rbs[i].velocity = new Vector2(0, 3);
             if (rbs[i].position.y < ship.transform.position.y - 10 + rand.Next(5)) {
                 ResetPosition(i);
             } else if (rbs[i].position.y > ship.transform.position.y + 50) {

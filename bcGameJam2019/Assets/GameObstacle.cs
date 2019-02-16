@@ -14,6 +14,8 @@ public class GameObstacle : MonoBehaviour
     private Rigidbody2D[] rbs;
     private Vector2[] positions;
     private PolygonCollider2D[] colliders;
+
+    private const int numWorlds = 4;
     
     void ResetPosition(int i) {
         positions[i].x = ship.transform.position.x + rand.Next(5) - 2;
@@ -22,6 +24,11 @@ public class GameObstacle : MonoBehaviour
     }
  
     void Start() {
+        List<WorldGenerator.World> worlds = new List<WorldGenerator.World>();
+        for(int i = 0; i < numWorlds; i++){
+            worlds.Add(new WorldGenerator.World(11));
+        }
+        List<int[,]> frames = WorldGenerator.getWorldFrames(worlds);
         rand = new System.Random();
         obstacles = new GameObject[numObstacles];
         rbs = new Rigidbody2D[numObstacles];
@@ -38,7 +45,11 @@ public class GameObstacle : MonoBehaviour
            }
            Rigidbody2D rb = obstacle.AddComponent<Rigidbody2D>();
            rb.freezeRotation = true;
+           rb.isKinematic = true;
            obstacle.AddComponent<PolygonCollider2D>();
+
+           rb.velocity = new Vector2(0, 3);
+
            
            obstacles[i] = obstacle;
            rbs[i] = rb;
@@ -51,7 +62,6 @@ public class GameObstacle : MonoBehaviour
     {
         for (int i = 0; i < numObstacles; i++) {
             obstacles[i].transform.rotation = Quaternion.identity;
-            rbs[i].velocity = new Vector2(0, 3);
             if (rbs[i].position.y < ship.transform.position.y - 10 + rand.Next(5)) {
                 ResetPosition(i);
             } else if (rbs[i].position.y > ship.transform.position.y + 50) {
