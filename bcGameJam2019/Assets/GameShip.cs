@@ -5,63 +5,57 @@ using UnityEngine;
 
 public class GameShip : MonoBehaviour
 {
-    public float speed;
-    public Camera thiscam;
-    public float shipscrollspeed;
+    public Camera camera;
+    public float shipMoveSpeed;
+    public float shipScrollSpeed;
 
-    private Rigidbody2D rb;
-    private Vector2 moveVelocity;
-    private float leftbound;
-    private float topbound;
-    private float bottombound;
-    private float rightbound;
+    private Rigidbody2D shipRB;
+    private Rigidbody2D cameraRB;
 
-
-    // Start is called before the first frame update
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
+        shipRB = GetComponent<Rigidbody2D>();
+        cameraRB = camera.GetComponent<Rigidbody2D>();
     }
 
     void FixedUpdate()
     {
-        // setting bounds for camera
-        float vertextent = thiscam.orthographicSize;
+        float vertextent = camera.orthographicSize;
         float horzextent = vertextent;
-        leftbound = thiscam.transform.position.x - horzextent;
-        rightbound = thiscam.transform.position.x + horzextent;
-        topbound = thiscam.transform.position.y + vertextent;
-        bottombound = thiscam.transform.position.y - vertextent;
+        float leftBound = camera.transform.position.x - horzextent;
+        float rightBound = camera.transform.position.x + horzextent;
+        float topBound = camera.transform.position.y + vertextent;
+        float bottomBound = camera.transform.position.y - vertextent;
 
-        moveVelocity = new Vector2(Input.GetAxisRaw("Horizontal")*speed, Input.GetAxisRaw("Vertical")*speed + shipscrollspeed);
+        Vector2 shipVelocity = new Vector2(
+            Input.GetAxisRaw("Horizontal")*shipMoveSpeed,
+            Input.GetAxisRaw("Vertical")*shipMoveSpeed + shipScrollSpeed);
 
 
-        Vector2 newpos = rb.position + moveVelocity * Time.fixedDeltaTime;
-        if (newpos.y >= topbound)
+        Vector2 newpos = shipRB.position + shipVelocity * Time.fixedDeltaTime;
+        if (newpos.y >= topBound)
         {
-            newpos.y = topbound;
+            newpos.y = topBound;
         }
-        else if(newpos.y <= bottombound)
+        else if(newpos.y <= bottomBound)
         {
-            newpos.y = bottombound;
+            newpos.y = bottomBound;
         }
-        if (newpos.x > rightbound)
+        if (newpos.x > rightBound)
         {
-            newpos.x = rightbound;
+            newpos.x = rightBound;
         }
-        else if (newpos.x < leftbound)
+        else if (newpos.x < leftBound)
         {
-            newpos.x = leftbound;
+            newpos.x = leftBound;
         }
 
-        rb.MovePosition(newpos);
+        shipRB.MovePosition(newpos);
+        
+        if (newpos.y > 100) {
+            shipRB.MovePosition(new Vector2(shipRB.position.x, 0));
+            cameraRB.MovePosition(new Vector2(cameraRB.position.x, 0));
+        }
     }
 
 
