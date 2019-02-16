@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-public class shipMovement : MonoBehaviour
+public class GameShip : MonoBehaviour
 {
     public float speed;
     public Camera thiscam;

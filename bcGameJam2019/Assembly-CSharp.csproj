@@ -53,11 +53,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\cameraDiagonal.cs" />
-     <Compile Include="Assets\cameraScroll.cs" />
-     <Compile Include="Assets\ScrollScript.cs" />
-     <Compile Include="Assets\shipMovement.cs" />
-     <Compile Include="Assets\titlenshipdiag.cs" />
+     <Compile Include="Assets\EndCamera.cs" />
+     <Compile Include="Assets\GameCamera.cs" />
+     <Compile Include="Assets\GameObstacle.cs" />
+     <Compile Include="Assets\GameShip.cs" />
+     <Compile Include="Assets\TitleCamera.cs" />
+     <Compile Include="Assets\TitleShip.cs" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
      <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro_Properties.cginc" />

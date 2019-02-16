@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ScrollScript : MonoBehaviour
+public class EndCamera : MonoBehaviour
 {
     private Rigidbody2D rb;
 
