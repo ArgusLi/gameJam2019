@@ -185,7 +185,7 @@ MonoBehaviour:
   boostSprite: {fileID: 21300000, guid: 49f1709da0f62c4d3a2ab0ac47fb8ba4, type: 3}
   spinSprite: {fileID: 21300000, guid: d81a906e4d3849d5199a58a7ff1779ca, type: 3}
   ship: {fileID: 229357064}
-  numPowerups: 2
+  numPowerups: 6
 --- !u!114 &186487987
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -198,8 +198,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a213b8cb0d8c07baba4913367b19db64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sprite1: {fileID: 0}
-  sprite2: {fileID: 0}
+  sprite1: {fileID: 21300000, guid: ec05a1f2197f673f487ce7fa10274ec8, type: 3}
+  sprite2: {fileID: 21300000, guid: 199d2c70751c86e4cb28465e5ee2bdab, type: 3}
   ship: {fileID: 423979373}
   numObstacles: 2
 --- !u!114 &186487988
@@ -214,14 +214,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 667f5b5dcc51cb95484735c5b5eec097, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  swapSprite: {fileID: 0}
-  sync2Sprite: {fileID: 0}
-  sync4Sprite: {fileID: 0}
-  slowSprite: {fileID: 0}
-  boostSprite: {fileID: 0}
-  spinSprite: {fileID: 0}
+  swapSprite: {fileID: 21300000, guid: 928a93709310a4ef080f2d9acc47ddeb, type: 3}
+  sync2Sprite: {fileID: 21300000, guid: edbff6473af728ad382cae4e6c1b4c1b, type: 3}
+  sync4Sprite: {fileID: 21300000, guid: b2d1e7ab0a218c370883481c7fbea555, type: 3}
+  slowSprite: {fileID: 21300000, guid: 1ea2eaa908812eba0a71f8f5deb7b1d0, type: 3}
+  boostSprite: {fileID: 21300000, guid: 49f1709da0f62c4d3a2ab0ac47fb8ba4, type: 3}
+  spinSprite: {fileID: 21300000, guid: d81a906e4d3849d5199a58a7ff1779ca, type: 3}
   ship: {fileID: 423979373}
-  numPowerups: 2
+  numPowerups: 6
 --- !u!114 &186487989
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -234,14 +234,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 667f5b5dcc51cb95484735c5b5eec097, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  swapSprite: {fileID: 0}
-  sync2Sprite: {fileID: 0}
-  sync4Sprite: {fileID: 0}
-  slowSprite: {fileID: 0}
-  boostSprite: {fileID: 0}
-  spinSprite: {fileID: 0}
+  swapSprite: {fileID: 21300000, guid: 928a93709310a4ef080f2d9acc47ddeb, type: 3}
+  sync2Sprite: {fileID: 21300000, guid: edbff6473af728ad382cae4e6c1b4c1b, type: 3}
+  sync4Sprite: {fileID: 21300000, guid: b2d1e7ab0a218c370883481c7fbea555, type: 3}
+  slowSprite: {fileID: 21300000, guid: 1ea2eaa908812eba0a71f8f5deb7b1d0, type: 3}
+  boostSprite: {fileID: 21300000, guid: 49f1709da0f62c4d3a2ab0ac47fb8ba4, type: 3}
+  spinSprite: {fileID: 21300000, guid: d81a906e4d3849d5199a58a7ff1779ca, type: 3}
   ship: {fileID: 1666694144}
-  numPowerups: 2
+  numPowerups: 6
 --- !u!114 &186487990
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -254,8 +254,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a213b8cb0d8c07baba4913367b19db64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sprite1: {fileID: 0}
-  sprite2: {fileID: 0}
+  sprite1: {fileID: 21300000, guid: 199d2c70751c86e4cb28465e5ee2bdab, type: 3}
+  sprite2: {fileID: 21300000, guid: ec05a1f2197f673f487ce7fa10274ec8, type: 3}
   ship: {fileID: 1666694144}
   numObstacles: 2
 --- !u!114 &186487991
@@ -270,12 +270,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 667f5b5dcc51cb95484735c5b5eec097, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  swapSprite: {fileID: 0}
-  sync2Sprite: {fileID: 0}
-  sync4Sprite: {fileID: 0}
-  slowSprite: {fileID: 0}
-  boostSprite: {fileID: 0}
-  spinSprite: {fileID: 0}
+  swapSprite: {fileID: 21300000, guid: 928a93709310a4ef080f2d9acc47ddeb, type: 3}
+  sync2Sprite: {fileID: 21300000, guid: edbff6473af728ad382cae4e6c1b4c1b, type: 3}
+  sync4Sprite: {fileID: 21300000, guid: b2d1e7ab0a218c370883481c7fbea555, type: 3}
+  slowSprite: {fileID: 21300000, guid: 1ea2eaa908812eba0a71f8f5deb7b1d0, type: 3}
+  boostSprite: {fileID: 21300000, guid: 49f1709da0f62c4d3a2ab0ac47fb8ba4, type: 3}
+  spinSprite: {fileID: 21300000, guid: d81a906e4d3849d5199a58a7ff1779ca, type: 3}
   ship: {fileID: 341246255}
   numPowerups: 2
 --- !u!114 &186487992
