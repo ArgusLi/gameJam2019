@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class TitleCamera : MonoBehaviour
 {
-    public float shipscrollspeed;
+
     private Rigidbody2D rb;
 
     public float zoomSpeed;
@@ -17,7 +17,7 @@ public class TitleCamera : MonoBehaviour
     {
         targetOrtho = Camera.main.orthographicSize;
         rb = GetComponent<Rigidbody2D>();
-        rb.velocity = new Vector2(0.5f*shipscrollspeed, shipscrollspeed);
+
     }
 
     void Update()

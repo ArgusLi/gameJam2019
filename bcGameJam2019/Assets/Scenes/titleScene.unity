@@ -124,7 +124,6 @@ GameObject:
   - component: {fileID: 238049769}
   - component: {fileID: 238049768}
   - component: {fileID: 238049765}
-  - component: {fileID: 238049766}
   m_Layer: 0
   m_Name: Spaceship1
   m_TagString: Untagged
@@ -151,19 +150,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &238049766
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 238049764}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 38f83e6d730e94646982148cbb9b20b5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  shipscrollspeed: 9
 --- !u!50 &238049768
 Rigidbody2D:
   serializedVersion: 4
@@ -257,7 +243,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1160794354}
   - component: {fileID: 1160794353}
-  - component: {fileID: 1160794355}
   - component: {fileID: 1160794352}
   - component: {fileID: 1160794351}
   - component: {fileID: 1160794350}
@@ -456,19 +441,6 @@ RectTransform:
   m_AnchoredPosition: {x: 1.82, y: 1.8}
   m_SizeDelta: {x: 20, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1160794355
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1160794349}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 38f83e6d730e94646982148cbb9b20b5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  shipscrollspeed: 9
 --- !u!50 &1160794356
 Rigidbody2D:
   serializedVersion: 4
@@ -500,6 +472,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1251458528}
   - component: {fileID: 1251458527}
+  - component: {fileID: 1251458529}
+  - component: {fileID: 1251458530}
   m_Layer: 0
   m_Name: Spaace
   m_TagString: Untagged
@@ -549,7 +523,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
-  m_Size: {x: 100, y: 100}
+  m_Size: {x: 100, y: 300}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -569,6 +543,40 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1251458529
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1251458526}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8ce7ef99c9324e2bb67de004765b48a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scrollSheet: 9
+--- !u!50 &1251458530
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1251458526}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1956552163
 GameObject:
   m_ObjectHideFlags: 0
@@ -686,7 +694,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2c5a8802b7b54537a3c228a8b4f499c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shipscrollspeed: 9
   zoomSpeed: 1
   targetOrtho: 0
   smoothSpeed: 2

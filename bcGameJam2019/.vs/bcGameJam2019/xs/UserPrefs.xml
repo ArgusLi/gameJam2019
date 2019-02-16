@@ -1,11 +1,11 @@
 ﻿<Properties StartupConfiguration="{1B1C378D-3CE6-E9E8-76F3-1188B888CA65}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/title&amp;shipdiag.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/TitleCamera.cs">
     <Files>
-      <File FileName="Assets/shipMovement.cs" Line="23" Column="42" />
-      <File FileName="Assets/cameraScroll.cs" Line="15" Column="36" />
-      <File FileName="Assets/ScrollScript.cs" Line="7" Column="5" />
-      <File FileName="Assets/cameraDiagonal.cs" Line="20" Column="42" />
-      <File FileName="Assets/title&amp;shipdiag.cs" Line="7" Column="5" />
+      <File FileName="Assets/GameCamera.cs" Line="1" Column="1" />
+      <File FileName="Assets/GameObstacle.cs" Line="1" Column="1" />
+      <File FileName="Assets/GameShip.cs" Line="50" Column="10" />
+      <File FileName="Assets/titleBackgroundScroll.cs" Line="22" Column="10" />
+      <File FileName="Assets/TitleCamera.cs" Line="20" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
