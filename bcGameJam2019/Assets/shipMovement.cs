@@ -7,7 +7,6 @@ public class shipMovement : MonoBehaviour
 {
     public float speed;
     public Camera thiscam;
-    public float shipscrollspeed;
 
     private Rigidbody2D rb;
     private Vector2 moveVelocity;
@@ -27,8 +26,6 @@ public class shipMovement : MonoBehaviour
         rightbound = thiscam.transform.position.x + horzextent;
         topbound = thiscam.transform.position.y + vertextent;
         bottombound = thiscam.transform.position.y - vertextent;
-        // setting scrolling speed for speed
-        rb.velocity = thiscam.velocity;
     }
 
     // Update is called once per frame
@@ -58,6 +55,9 @@ public class shipMovement : MonoBehaviour
         {
             newpos.x = leftbound;
         }
+        rb.velocity = new Vector3(0, 5, 0);
         rb.MovePosition(newpos);
     }
+
+
 }
