@@ -18,15 +18,37 @@ namespace WorldGenTest{
                 posX = N/2 + 1;
                 posY = N/2 + 1;
             }
+            public override string ToString(){
+                string ret = "";
+                for(int i = 0; i < N; i++){
+                    for(int j = 0; j < N; j++){
+                        if(board[j, i] == 0){
+                            ret += "  ";
+                        }
+                        else{
+                            ret += "# ";
+                        }
+                        // ret += board[j, i] + " ";
+                    }
+                    ret += "\n";
+                }
+                return ret;
+            }
         }
 
         static void Main(){
-            int N = 31;
+            int N = 11;
             World[] worlds = new World[4];
             for(int i = 0; i < worlds.Length; i++){
                 worlds[i] = new World(N);
                 fill(worlds[i]);
             }
+            worlds[1].direction = 'L';
+            worlds[2].direction = 'R';
+            worlds[3].direction = 'D';
+
+
+
 
             List<char> path = new List<char>();
             List<char> moves = new List<char>();
@@ -72,19 +94,19 @@ namespace WorldGenTest{
                 int horDisplacement = 0;
                 switch(dir){
                     case 'U':
+                        if(Math.Abs(vertDisplacement-1) >= N/2){
+                            continue;
+                        }
+                        vertDisplacement--;
+                        break;
+                    case 'D':
                         if(vertDisplacement+1 >= N/2){
                             continue;
                         }
                         vertDisplacement++;
                         break;
-                    case 'D':
-                        if(vertDisplacement-1 >= N/2){
-                            continue;
-                        }
-                        vertDisplacement--;
-                        break;
                     case 'L':
-                        if(horDisplacement-1 >= N/2){
+                        if(Math.Abs(horDisplacement-1) >= N/2){
                             continue;
                         }
                         horDisplacement--;
@@ -97,19 +119,19 @@ namespace WorldGenTest{
                         break;
                     case 'N':
                         if(up){
+                            if(Math.Abs(vertDisplacement-1) >= N/2){
+                                continue;
+                            }
+                            vertDisplacement--;
+                        }
+                        if(down){
                             if(vertDisplacement+1 >= N/2){
                                 continue;
                             }
                             vertDisplacement++;
                         }
-                        if(down){
-                            if(vertDisplacement-1 >= N/2){
-                                continue;
-                            }
-                            vertDisplacement--;
-                        }
                         if(left){
-                            if(horDisplacement-1 >= N/2){
+                            if(Math.Abs(horDisplacement-1) >= N/2){
                                 continue;
                             }
                             horDisplacement--;
@@ -125,13 +147,11 @@ namespace WorldGenTest{
                 path.Add(dir);
                 moves.RemoveAt(index);
             }
-
-            
-
+            Console.WriteLine(path.ToArray());
             for(int i = 0; i < worlds.Length; i++){
 				// write path into world
-				int posx;
-				int posy;
+				int posx = 0;
+				int posy = 0;
 				switch (worlds[i].direction) {
 					case 'L':
 						posx = N-1;
@@ -150,11 +170,12 @@ namespace WorldGenTest{
 						posx = N / 2 + 1;
 						break;
 				}
+
 				worlds[i].board[posx, posy] = 0;
 				for (int j = 0; j < path.Count; j++){
 					char move = path[j];
 					if (move == 'N'){
-						move == worlds[i].direction;
+						move = worlds[i].direction;
 					}
 					switch (move){
 						case 'L':
@@ -170,9 +191,20 @@ namespace WorldGenTest{
 							posy--;
 							break;
 					}
-					worlds[i].board[posx, posy] = 0;
+                    try{
+					    worlds[i].board[posx, posy] = 0;
+                    }
+                    catch(System.Exception e){
+                        Console.WriteLine("Blame Sean 5");
+                    }
+
 				}
             }
+            Console.WriteLine(worlds[0]);
+            Console.WriteLine(worlds[1]);
+            Console.WriteLine(worlds[2]);
+            Console.WriteLine(worlds[3]);
+
 
 
 
