@@ -37,6 +37,7 @@ public class GameObstacle : MonoBehaviour
                 renderer.sprite = sprite2;
            }
            Rigidbody2D rb = obstacle.AddComponent<Rigidbody2D>();
+           rb.freezeRotation = true;
            obstacle.AddComponent<PolygonCollider2D>();
            
            obstacles[i] = obstacle;

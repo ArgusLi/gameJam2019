@@ -39,6 +39,7 @@ public class GamePowerup : MonoBehaviour
            powerup.transform.localScale = new Vector3(0.2f, 0.2f, 1f);
            renderer.sprite = sprites[i];
            Rigidbody2D rb = powerup.AddComponent<Rigidbody2D>();
+           rb.freezeRotation = true;
            powerup.AddComponent<PolygonCollider2D>();
            
            powerups[i] = powerup;
