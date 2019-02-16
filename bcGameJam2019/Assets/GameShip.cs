@@ -27,8 +27,7 @@ public class GameShip : MonoBehaviour
         shipRB = GetComponent<Rigidbody2D>();
         cameraRB = cam.GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
-        xaxis = Input.GetAxisRaw("Horizontal") * shipMoveSpeed;
-        yaxis = Input.GetAxisRaw("Vertical") * shipMoveSpeed + shipScrollSpeed;
+
     }
 
     void FixedUpdate()
@@ -42,26 +41,39 @@ public class GameShip : MonoBehaviour
         float rightBound = cam.transform.position.x + horzextent;
         float topBound = cam.transform.position.y + vertextent;
         float bottomBound = cam.transform.position.y - vertextent;
-
+        xaxis = Input.GetAxisRaw("Horizontal") * shipMoveSpeed;
+        yaxis = Input.GetAxisRaw("Vertical") * shipMoveSpeed + shipScrollSpeed;
         Vector2 shipVelocity = new Vector2(xaxis,yaxis);
 
 
         Vector2 newpos = shipRB.position + shipVelocity * Time.fixedDeltaTime;
         if (newpos.y >= topBound)
         {
-            newpos.y = topBound;
+            endTime = Time.unscaledTime;
+            animator.SetBool("isTriggered", true);
+            deltaTime = endTime - startTime;
+            StartCoroutine(LoadAfterDelay());
         }
         else if(newpos.y <= bottomBound)
         {
-            newpos.y = bottomBound;
+            endTime = Time.unscaledTime;
+            animator.SetBool("isTriggered", true);
+            deltaTime = endTime - startTime;
+            StartCoroutine(LoadAfterDelay());
         }
         if (newpos.x > rightBound)
         {
-            newpos.x = rightBound;
+            endTime = Time.unscaledTime;
+            animator.SetBool("isTriggered", true);
+            deltaTime = endTime - startTime;
+            StartCoroutine(LoadAfterDelay());
         }
         else if (newpos.x < leftBound)
         {
-            newpos.x = leftBound;
+            endTime = Time.unscaledTime;
+            animator.SetBool("isTriggered", true);
+            deltaTime = endTime - startTime;
+            StartCoroutine(LoadAfterDelay());
         }
 
         shipRB.MovePosition(newpos);
@@ -91,7 +103,7 @@ public class GameShip : MonoBehaviour
         Vector3 rotateValue = new Vector3(0, -90, 0);
         shipRB.transform.eulerAngles = transform.eulerAngles - rotateValue;
         // cameraRB.transform.eulerAngles = transform.eulerAngles - rotateValue; 
-        cameraRB.rotation += 90f;
+        cameraRB.transform.forward -= cameraRB.transform.forward;
         //}
         /*else if (col.name == "swap")
         {
