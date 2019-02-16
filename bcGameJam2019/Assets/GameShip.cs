@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 
 public class GameShip : MonoBehaviour
@@ -18,6 +17,7 @@ public class GameShip : MonoBehaviour
     {
         shipRB = GetComponent<Rigidbody2D>();
         cameraRB = cam.GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
     }
 
     void FixedUpdate()
@@ -59,10 +59,15 @@ public class GameShip : MonoBehaviour
             cameraRB.MovePosition(new Vector2(cameraRB.position.x, 0));
         }
     }
-
-    private void OnTriggerEnter2D(Collider2D collision)
+    
+    void OnTriggerEnter2D(Collider2D collider)
     {
-        Debug.Log("collision");
+        animator.SetBool("isTriggered", true);
+        StartCoroutine(LoadAfterDelay());
     }
-
+    
+    IEnumerator LoadAfterDelay() {
+        yield return new WaitForSecondsRealtime(1);
+        UnityEngine.SceneManagement.SceneManager.LoadScene("End");
+    }
 }
