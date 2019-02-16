@@ -13,7 +13,7 @@ public class ScrollScript : MonoBehaviour
 
     void Update()
     {
-        rb.velocity = new Vector2(0, -5);
+        rb.velocity = new Vector2(0, -0.3f);
         if (rb.position.y < -100) {
             rb.MovePosition(Vector2.zero);
         }
