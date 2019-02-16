@@ -49,6 +49,7 @@ public class GameObstacle : MonoBehaviour
     void Update()
     {
         for (int i = 0; i < numObstacles; i++) {
+            obstacles[i].transform.rotation = Quaternion.identity;
             rbs[i].velocity = new Vector2(0, 3);
             if (rbs[i].position.y < ship.transform.position.y - 10 + rand.Next(5)) {
                 ResetPosition(i);
