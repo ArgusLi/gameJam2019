@@ -1,31 +1,33 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 
 public class GameShip : MonoBehaviour
 {
-    public Camera camera;
+    public Camera cam;
     public float shipMoveSpeed;
     public float shipScrollSpeed;
 
     private Rigidbody2D shipRB;
     private Rigidbody2D cameraRB;
+    private Animator animator;
 
     void Start()
     {
         shipRB = GetComponent<Rigidbody2D>();
-        cameraRB = camera.GetComponent<Rigidbody2D>();
+        cameraRB = cam.GetComponent<Rigidbody2D>();
     }
 
     void FixedUpdate()
     {
-        float vertextent = camera.orthographicSize;
+        float vertextent = cam.orthographicSize;
         float horzextent = vertextent;
-        float leftBound = camera.transform.position.x - horzextent;
-        float rightBound = camera.transform.position.x + horzextent;
-        float topBound = camera.transform.position.y + vertextent;
-        float bottomBound = camera.transform.position.y - vertextent;
+        float leftBound = cam.transform.position.x - horzextent;
+        float rightBound = cam.transform.position.x + horzextent;
+        float topBound = cam.transform.position.y + vertextent;
+        float bottomBound = cam.transform.position.y - vertextent;
 
         Vector2 shipVelocity = new Vector2(
             Input.GetAxisRaw("Horizontal")*shipMoveSpeed,
@@ -58,5 +60,9 @@ public class GameShip : MonoBehaviour
         }
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        Debug.Log("collision");
+    }
 
 }

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class shipTriggerExplosion : MonoBehaviour
 {
@@ -8,7 +9,7 @@ public class shipTriggerExplosion : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -17,8 +18,11 @@ public class shipTriggerExplosion : MonoBehaviour
         
     }
 
+
     void OnTriggerEnter2D(Collider2D collision)
     {
         animator.SetBool("isTriggered", true);
+        yield return new WaitForSecondsRealtime(1);
+        SceneManagement.LoadScene("End");
     }
 }
