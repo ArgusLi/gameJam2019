@@ -57,14 +57,49 @@ namespace WorldGenTest{
             
 
             for(int i = 0; i < worlds.Length; i++){
-                // write path into world
-
-                // char dir = path.next();
-                // if(dir == 'N'){
-                //     dir = worlds[i].direction;
-                // }
-
-                // logic for u d l r
+				// write path into world
+				int posx;
+				int posy;
+				switch (worlds[i].direction) {
+					case 'L':
+						posx = N-1;
+						posy = N / 2 + 1;
+						break;
+					case 'R':
+						posx = 0;
+						posy = N / 2 + 1;
+						break;
+					case 'U':
+						posy = 0;
+						posx = N / 2 + 1;
+						break;
+					case 'D':
+						posy = N - 1;
+						posx = N / 2 + 1;
+						break;
+				}
+				worlds[i].board[posx, posy] = 0;
+				for (int j = 0; j < path.Count; j++){
+					char move = path[j];
+					if (move == 'N'){
+						move == worlds[i].direction;
+					}
+					switch (move){
+						case 'L':
+							posx--;
+							break;
+						case 'R':
+							posx++;
+							break;
+						case 'U':
+							posy++;
+							break;
+						case 'D':
+							posy--;
+							break;
+					}
+					worlds[i].board[posx, posy] = 0;
+				}
             }
 
 
