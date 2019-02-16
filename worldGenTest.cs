@@ -15,8 +15,8 @@ namespace WorldGenTest{
                 N = n;
                 board = new int[N, N];
                 direction = 'U';
-                posX = N/2 + 1;
-                posY = N/2 + 1;
+                posX = N/2;
+                posY = N/2;
             }
             public override string ToString(){
                 string ret = "";
@@ -67,7 +67,7 @@ namespace WorldGenTest{
                 moves.Add('D');
             }
 
-            bool up = false; 
+            bool up = false;
             bool down = false;
             bool left = false;
             bool right = false;
@@ -100,7 +100,7 @@ namespace WorldGenTest{
                         vertDisplacement--;
                         break;
                     case 'D':
-                        if(vertDisplacement+1 >= N/2){
+                        if(Math.Abs(vertDisplacement+1) >= N/2){
                             continue;
                         }
                         vertDisplacement++;
@@ -112,7 +112,7 @@ namespace WorldGenTest{
                         horDisplacement--;
                         break;
                     case 'R':
-                        if(horDisplacement+1 >= N/2){
+                        if(Math.Abs(horDisplacement+1) >= N/2){
                             continue;
                         }
                         horDisplacement++;
@@ -125,7 +125,7 @@ namespace WorldGenTest{
                             vertDisplacement--;
                         }
                         if(down){
-                            if(vertDisplacement+1 >= N/2){
+                            if(Math.Abs(vertDisplacement+1) >= N/2){
                                 continue;
                             }
                             vertDisplacement++;
@@ -137,7 +137,7 @@ namespace WorldGenTest{
                             horDisplacement--;
                         }
                         if(right){
-                            if(horDisplacement+1 >= N/2){
+                            if(Math.Abs(horDisplacement+1) >= N/2){
                                 continue;
                             }
                             horDisplacement++;
@@ -155,19 +155,19 @@ namespace WorldGenTest{
 				switch (worlds[i].direction) {
 					case 'L':
 						posx = N-1;
-						posy = N / 2 + 1;
+						posy = N / 2;
 						break;
 					case 'R':
 						posx = 0;
-						posy = N / 2 + 1;
+						posy = N / 2;
 						break;
 					case 'U':
-						posy = 0;
-						posx = N / 2 + 1;
+						posy = N - 1;
+						posx = N / 2;
 						break;
 					case 'D':
-						posy = N - 1;
-						posx = N / 2 + 1;
+						posy = 0;
+						posx = N / 2;
 						break;
 				}
 
@@ -185,10 +185,10 @@ namespace WorldGenTest{
 							posx++;
 							break;
 						case 'U':
-							posy++;
+							posy--;
 							break;
 						case 'D':
-							posy--;
+							posy++;
 							break;
 					}
                     try{
@@ -197,7 +197,6 @@ namespace WorldGenTest{
                     catch(System.Exception e){
                         Console.WriteLine("Blame Sean 5");
                     }
-
 				}
             }
             Console.WriteLine(worlds[0]);

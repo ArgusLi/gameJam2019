@@ -12,9 +12,14 @@ public class GameShip : MonoBehaviour
     private Rigidbody2D shipRB;
     private Rigidbody2D cameraRB;
     private Animator animator;
+    private float startTime; // initial time in seconds
+    private float endTime; //final time in seconds
+    public float deltaTime; //score in seconds
 
     void Start()
     {
+        startTime = Time.unscaledTime;
+
         shipRB = GetComponent<Rigidbody2D>();
         cameraRB = cam.GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
@@ -62,12 +67,19 @@ public class GameShip : MonoBehaviour
     
     void OnTriggerEnter2D(Collider2D collider)
     {
+        endTime = Time.unscaledTime;
         animator.SetBool("isTriggered", true);
+        deltaTime = endTime - startTime;
         StartCoroutine(LoadAfterDelay());
     }
-    
+
     IEnumerator LoadAfterDelay() {
         yield return new WaitForSecondsRealtime(1);
         UnityEngine.SceneManagement.SceneManager.LoadScene("End");
+    }
+
+    void OnDisable()
+    {
+        PlayerPrefs.SetFloat("score", deltaTime);
     }
 }
