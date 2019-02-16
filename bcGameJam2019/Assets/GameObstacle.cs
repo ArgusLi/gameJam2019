@@ -13,6 +13,7 @@ public class GameObstacle : MonoBehaviour
     private GameObject[] obstacles;
     private Rigidbody2D[] rbs;
     private Vector2[] positions;
+    private PolygonCollider2D[] colliders;
     
     void ResetPosition(int i) {
         positions[i].x = ship.transform.position.x + rand.Next(5) - 2;
@@ -25,6 +26,7 @@ public class GameObstacle : MonoBehaviour
         obstacles = new GameObject[numObstacles];
         rbs = new Rigidbody2D[numObstacles];
         positions = new Vector2[numObstacles];
+        colliders = new PolygonCollider2D[numObstacles];
         for (int i = 0; i < numObstacles; i++) {
            GameObject obstacle = new GameObject("Obstacle" + i.ToString());
            SpriteRenderer renderer = obstacle.AddComponent<SpriteRenderer>();
@@ -35,6 +37,7 @@ public class GameObstacle : MonoBehaviour
                 renderer.sprite = sprite2;
            }
            Rigidbody2D rb = obstacle.AddComponent<Rigidbody2D>();
+           obstacle.AddComponent<PolygonCollider2D>();
            
            obstacles[i] = obstacle;
            rbs[i] = rb;
