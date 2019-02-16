@@ -1,19 +1,17 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class endScore : MonoBehaviour
 {
-    public TextMesh tm;
+    public TextMeshPro tm;
     private float deltaTime;
 
     void OnEnable()
     {
         deltaTime = PlayerPrefs.GetFloat("score");
-        tm = (TextMesh)GameObject.Find("nameOfTheObject").GetComponent<TextMesh>();
         int score = (int)deltaTime;
-        tm.text = "Score: " + score;
+        tm.SetText("Score: " + score.ToString());
     }
-
-
 }
