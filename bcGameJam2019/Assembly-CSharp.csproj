@@ -56,6 +56,7 @@
      <Compile Include="Assets\EndCamera.cs" />
      <Compile Include="Assets\GameCamera.cs" />
      <Compile Include="Assets\GameObstacle.cs" />
+     <Compile Include="Assets\GamePowerup.cs" />
      <Compile Include="Assets\GameShip.cs" />
      <Compile Include="Assets\titleBackgroundScroll.cs" />
      <Compile Include="Assets\titleButtonMoveUp.cs" />
