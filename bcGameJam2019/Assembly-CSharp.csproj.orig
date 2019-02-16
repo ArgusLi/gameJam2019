@@ -61,10 +61,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\cameraDiagonal.cs" />
-    <Compile Include="Assets\cameraScroll.cs" />
-    <Compile Include="Assets\ScrollScript.cs" />
-    <Compile Include="Assets\shipMovement.cs" />
+    <Compile Include="Assets\EndCamera.cs" />
+    <Compile Include="Assets\GameCamera.cs" />
+    <Compile Include="Assets\GameObstacle.cs" />
+    <Compile Include="Assets\GameShip.cs" />
+    <Compile Include="Assets\titleBackgroundScroll.cs" />
+    <Compile Include="Assets\titleButtonMoveUp.cs" />
+    <Compile Include="Assets\TitleCamera.cs" />
+    <Compile Include="Assets\TitleShip.cs" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro_Properties.cginc" />
@@ -722,9 +726,15 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\cameraScroll.cs" />
-     <Compile Include="Assets\ScrollScript.cs" />
-     <Compile Include="Assets\shipMovement.cs" />
+     <Compile Include="Assets\EndCamera.cs" />
+     <Compile Include="Assets\GameCamera.cs" />
+     <Compile Include="Assets\GameObstacle.cs" />
+     <Compile Include="Assets\GamePowerup.cs" />
+     <Compile Include="Assets\GameShip.cs" />
+     <Compile Include="Assets\titleBackgroundScroll.cs" />
+     <Compile Include="Assets\titleButtonMoveUp.cs" />
+     <Compile Include="Assets\TitleCamera.cs" />
+     <Compile Include="Assets\TitleShip.cs" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
      <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro_Properties.cginc" />
@@ -1326,4 +1336,4 @@
   -->
   
 </Project>
->>>>>>> a26e37e57fe333d7b4aaccedde0c5bde12a3e09c
+>>>>>>> bad7d1939482093eebc635e2fdccea8b53a8e107
