@@ -240,6 +240,14 @@ namespace WorldGenTest{
                     world.board[i, j] = 1;
                 }
             }
+            for(int i = 0; i < world.board.GetLength(0); i++){
+                for(int j = 0; j < world.board.GetLength(1); j++){
+                    int rand = r.Next(2);
+                    if(rand != 1 && world.board[i, j] == 1){
+                        world.board[i, j] = 0;
+                    }
+                }
+            }
         }
 
 
