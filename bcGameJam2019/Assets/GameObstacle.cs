@@ -45,7 +45,11 @@ public class GameObstacle : MonoBehaviour
            }
            Rigidbody2D rb = obstacle.AddComponent<Rigidbody2D>();
            rb.freezeRotation = true;
+           rb.isKinematic = true;
            obstacle.AddComponent<PolygonCollider2D>();
+
+           rb.velocity = new Vector2(0, 3);
+
            
            obstacles[i] = obstacle;
            rbs[i] = rb;
@@ -58,7 +62,6 @@ public class GameObstacle : MonoBehaviour
     {
         for (int i = 0; i < numObstacles; i++) {
             obstacles[i].transform.rotation = Quaternion.identity;
-            rbs[i].velocity = new Vector2(0, 3);
             if (rbs[i].position.y < ship.transform.position.y - 10 + rand.Next(5)) {
                 ResetPosition(i);
             } else if (rbs[i].position.y > ship.transform.position.y + 50) {
