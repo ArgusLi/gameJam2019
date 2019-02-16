@@ -15,8 +15,8 @@ public class GameObstacle : MonoBehaviour
     private Vector2[] positions;
     
     void ResetPosition(int i) {
-        positions[i].x = ship.transform.position.x + rand.Next(4) - 2;
-        positions[i].y = ship.transform.position.y + 10 + rand.Next(5);
+        positions[i].x = ship.transform.position.x + rand.Next(5) - 2;
+        positions[i].y = ship.transform.position.y + 10 + rand.Next(6);
         rbs[i].MovePosition(positions[i]);
     }
  
@@ -47,7 +47,7 @@ public class GameObstacle : MonoBehaviour
     {
         for (int i = 0; i < numObstacles; i++) {
             rbs[i].velocity = new Vector2(0, 3);
-            if (rbs[i].position.y < ship.transform.position.y - 10 + rand.Next(4)) {
+            if (rbs[i].position.y < ship.transform.position.y - 10 + rand.Next(6)) {
                 ResetPosition(i);
             } else if (rbs[i].position.y > ship.transform.position.y + 50) {
                 ResetPosition(i);
