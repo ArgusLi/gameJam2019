@@ -37,14 +37,34 @@ public class GamePowerup : MonoBehaviour
            GameObject powerup = new GameObject("Powerup" + i.ToString());
            SpriteRenderer renderer = powerup.AddComponent<SpriteRenderer>();
            powerup.transform.localScale = new Vector3(0.2f, 0.2f, 1f);
-           renderer.sprite = sprites[i];
+           renderer.sprite = sprites[i % numPowerups];
            Rigidbody2D rb = powerup.AddComponent<Rigidbody2D>();
            rb.freezeRotation = true;
            rb.isKinematic = true;
 
            rb.velocity = new Vector2(0, 3);
 
-           powerup.AddComponent<PolygonCollider2D>();
+           PolygonCollider2D collider = powerup.AddComponent<PolygonCollider2D>();
+           switch (i % numPowerups) {
+           case 0:
+                collider.name = "swap";
+                break;
+           case 1:
+                collider.name = "sync2";
+                break;
+           case 2:
+                collider.name = "sync4";
+                break;
+           case 3:
+                collider.name = "slow";
+                break;
+           case 4:
+                collider.name = "boost";
+                break;
+           case 5:
+                collider.name = "spin";
+                break;
+           }
            
            powerups[i] = powerup;
            rbs[i] = rb;
