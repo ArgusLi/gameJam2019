@@ -1,8 +1,0 @@
-# Ignore everything
-/*
-/*/
-
-# Unignore important files
-!.gitignore
-!/bcGameJam2019/Assets/
-!/bcGameJam2019/ProjectSettings/
