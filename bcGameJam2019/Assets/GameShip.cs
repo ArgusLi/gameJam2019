@@ -59,6 +59,7 @@ public class GameShip : MonoBehaviour
             cameraRB.MovePosition(new Vector2(cameraRB.position.x, 0));
         }
     }
+<<<<<<< HEAD
     
     void OnTriggerEnter2D(Collider2D collider)
     {
@@ -70,4 +71,12 @@ public class GameShip : MonoBehaviour
         yield return new WaitForSecondsRealtime(1);
         UnityEngine.SceneManagement.SceneManager.LoadScene("End");
     }
+=======
+
+    /*private void OnTriggerEnter2D(Collider2D collision)
+    {
+        Debug.Log("collision");
+    }*/
+
+>>>>>>> 509d18b04489cc4ea13547e9234ff21c3d769ed0
 }
