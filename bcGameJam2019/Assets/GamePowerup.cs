@@ -37,7 +37,7 @@ public class GamePowerup : MonoBehaviour
            GameObject powerup = new GameObject("Powerup" + i.ToString());
            SpriteRenderer renderer = powerup.AddComponent<SpriteRenderer>();
            powerup.transform.localScale = new Vector3(0.2f, 0.2f, 1f);
-           renderer.sprite = sprites[i];
+           renderer.sprite = sprites[i % numPowerups];
            Rigidbody2D rb = powerup.AddComponent<Rigidbody2D>();
            rb.freezeRotation = true;
            rb.isKinematic = true;
