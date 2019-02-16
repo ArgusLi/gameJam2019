@@ -4,18 +4,14 @@ using UnityEngine;
 
 public class GameCamera : MonoBehaviour
 {
-    public float shipscrollspeed;
+    public float shipScrollSpeed;
+    
     private Rigidbody2D rb;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        rb.velocity = new Vector2(0, shipscrollspeed);
-
-    }
-
-    void Update()
-    {
+        rb.velocity = new Vector2(0, shipScrollSpeed);
 
     }
 }
