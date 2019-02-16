@@ -4,32 +4,54 @@ using UnityEngine;
 
 public class GameObstacle : MonoBehaviour
 {
-    public Sprite sprite;
+    public Sprite sprite1;
+    public Sprite sprite2;
     public GameObject ship;
-    private GameObject obstacle;
-    private Rigidbody2D rb;
-    private Vector2 position;
+    public int numObstacles;
     
-    void ResetPosition() {
-        position.x = ship.transform.position.x;
-        position.y = ship.transform.position.y + 10;
-        rb.MovePosition(position);
+    private System.Random rand;
+    private GameObject[] obstacles;
+    private Rigidbody2D[] rbs;
+    private Vector2[] positions;
+    
+    void ResetPosition(int i) {
+        positions[i].x = ship.transform.position.x + rand.Next(4) - 2;
+        positions[i].y = ship.transform.position.y + 10 + rand.Next(5);
+        rbs[i].MovePosition(positions[i]);
     }
  
     void Start() {
-         obstacle = new GameObject("Obstacle");
-         SpriteRenderer renderer = obstacle.AddComponent<SpriteRenderer>();
-         obstacle.transform.localScale = new Vector3(0.5f, 0.5f, 1f);
-         renderer.sprite = sprite;
-         rb = obstacle.AddComponent<Rigidbody2D>();
-         ResetPosition();
+        rand = new System.Random();
+        obstacles = new GameObject[numObstacles];
+        rbs = new Rigidbody2D[numObstacles];
+        positions = new Vector2[numObstacles];
+        for (int i = 0; i < numObstacles; i++) {
+           GameObject obstacle = new GameObject("Obstacle" + i.ToString());
+           SpriteRenderer renderer = obstacle.AddComponent<SpriteRenderer>();
+           obstacle.transform.localScale = new Vector3(0.5f, 0.5f, 1f);
+           if (i % 2 == 0) {
+                renderer.sprite = sprite1;
+           } else {
+                renderer.sprite = sprite2;
+           }
+           Rigidbody2D rb = obstacle.AddComponent<Rigidbody2D>();
+           
+           obstacles[i] = obstacle;
+           rbs[i] = rb;
+           positions[i] = Vector2.zero;
+           ResetPosition(i);
+        }
     }
 
     void Update()
     {
-        rb.velocity = new Vector2(0, 3);
-        if (rb.position.y < ship.transform.position.y - 10) {
-            ResetPosition();
+        for (int i = 0; i < numObstacles; i++) {
+            rbs[i].velocity = new Vector2(0, 3);
+            if (rbs[i].position.y < ship.transform.position.y - 10 + rand.Next(4)) {
+                ResetPosition(i);
+            } else if (rbs[i].position.y > ship.transform.position.y + 50) {
+                ResetPosition(i);
+            }
         }
     }
 }
