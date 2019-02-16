@@ -26,8 +26,10 @@ namespace WorldGenTest{
                             ret += "  ";
                         }else if(board[i, j] == 2){
                             ret += "@ ";
-                        }else{
+                        }else if(board[i, j] == 1){
                             ret += "# ";
+                        }else{
+                            ret += "! ";
                         }
                         // ret += board[j, i] + " ";
                     }
@@ -240,11 +242,23 @@ namespace WorldGenTest{
                     world.board[i, j] = 1;
                 }
             }
+            int gaps = 0;
+            while(gaps < 40){
+                for(int i = 0; i < world.board.GetLength(0); i++){
+                    for(int j = 0; j < world.board.GetLength(1); j++){
+                        int rand = r.Next(2);
+                        if(rand == 0 && world.board[i, j] == 1){
+                            world.board[i, j] = 0;
+                            gaps++;
+                        }
+                    }
+                }
+            }
             for(int i = 0; i < world.board.GetLength(0); i++){
                 for(int j = 0; j < world.board.GetLength(1); j++){
-                    int rand = r.Next(2);
-                    if(rand != 1 && world.board[i, j] == 1){
-                        world.board[i, j] = 0;
+                    int rand = r.Next(16);
+                    if(rand == 0 && world.board[i, j] == 0){
+                        world.board[i, j] = 3;
                     }
                 }
             }
