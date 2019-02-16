@@ -22,10 +22,11 @@ namespace WorldGenTest{
                 string ret = "";
                 for(int i = 0; i < N; i++){
                     for(int j = 0; j < N; j++){
-                        if(board[j, i] == 0){
+                        if(board[i, j] == 0){
                             ret += "  ";
-                        }
-                        else{
+                        }else if(board[i, j] == 2){
+                            ret += "@ ";
+                        }else{
                             ret += "# ";
                         }
                         // ret += board[j, i] + " ";
@@ -37,7 +38,7 @@ namespace WorldGenTest{
         }
 
         static void Main(){
-            int N = 11;
+            int N = 9;
             World[] worlds = new World[4];
             for(int i = 0; i < worlds.Length; i++){
                 worlds[i] = new World(N);
@@ -56,8 +57,8 @@ namespace WorldGenTest{
                 moves.Add('N');
             }
             Random r = new Random();
-            int lefts = r.Next(N/2);
-            int ups = r.Next(N/2);
+            int lefts = r.Next(N);
+            int ups = r.Next(N);
             for(int i = 0; i < lefts; i++){
                 moves.Add('L');
                 moves.Add('R');
@@ -156,22 +157,42 @@ namespace WorldGenTest{
 					case 'L':
 						posx = N-1;
 						posy = N / 2;
+						worlds[i].board[posy+1, posx] = 0;
+						worlds[i].board[posy-1, posx] = 0;
+						worlds[i].board[posy+1, posx-1] = 0;
+						worlds[i].board[posy-1, posx-1] = 0;
+						worlds[i].board[posy, posx-1] = 0;
 						break;
 					case 'R':
 						posx = 0;
 						posy = N / 2;
+						worlds[i].board[posy+1, posx] = 0;
+						worlds[i].board[posy-1, posx] = 0;
+						worlds[i].board[posy+1, posx+1] = 0;
+						worlds[i].board[posy-1, posx+1] = 0;
+						worlds[i].board[posy, posx+1] = 0;
 						break;
 					case 'U':
 						posy = N - 1;
 						posx = N / 2;
+						worlds[i].board[posy, posx+1] = 0;
+						worlds[i].board[posy, posx-1] = 0;
+						worlds[i].board[posy-1, posx+1] = 0;
+						worlds[i].board[posy-1, posx-1] = 0;
+						worlds[i].board[posy-1, posx] = 0;
 						break;
 					case 'D':
 						posy = 0;
 						posx = N / 2;
+						worlds[i].board[posy, posx+1] = 0;
+						worlds[i].board[posy, posx-1] = 0;
+						worlds[i].board[posy+1, posx+1] = 0;
+						worlds[i].board[posy+1, posx-1] = 0;
+						worlds[i].board[posy+1, posx] = 0;
 						break;
 				}
 
-				worlds[i].board[posx, posy] = 0;
+				worlds[i].board[posy, posx] = 2;
 				for (int j = 0; j < path.Count; j++){
 					char move = path[j];
 					if (move == 'N'){
@@ -192,7 +213,9 @@ namespace WorldGenTest{
 							break;
 					}
                     try{
-					    worlds[i].board[posx, posy] = 0;
+					    if(worlds[i].board[posy, posx] == 1){
+					        worlds[i].board[posy, posx] = 0;
+					    }
                     }
                     catch(System.Exception e){
                         Console.WriteLine("Blame Sean 5");
