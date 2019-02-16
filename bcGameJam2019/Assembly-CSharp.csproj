@@ -60,6 +60,9 @@
      <Compile Include="Assets\GameObstacle.cs" />
      <Compile Include="Assets\GamePowerup.cs" />
      <Compile Include="Assets\GameShip.cs" />
+     <Compile Include="Assets\ObstacleManager.cs" />
+     <Compile Include="Assets\PowerupManager.cs" />
+     <Compile Include="Assets\Scenes\MainLevelBehaviour.cs" />
      <Compile Include="Assets\titleBackgroundScroll.cs" />
      <Compile Include="Assets\titleButtonMoveUp.cs" />
      <Compile Include="Assets\TitleCamera.cs" />
