@@ -61,9 +61,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\buttonNextScene.cs" />
     <Compile Include="Assets\EndCamera.cs" />
+    <Compile Include="Assets\endScore.cs" />
     <Compile Include="Assets\GameCamera.cs" />
     <Compile Include="Assets\GameObstacle.cs" />
+    <Compile Include="Assets\GamePowerup.cs" />
     <Compile Include="Assets\GameShip.cs" />
     <Compile Include="Assets\titleBackgroundScroll.cs" />
     <Compile Include="Assets\titleButtonMoveUp.cs" />
@@ -726,6 +729,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\buttonNextScene.cs" />
      <Compile Include="Assets\EndCamera.cs" />
      <Compile Include="Assets\GameCamera.cs" />
      <Compile Include="Assets\GameObstacle.cs" />
@@ -1336,4 +1340,4 @@
   -->
   
 </Project>
->>>>>>> bad7d1939482093eebc635e2fdccea8b53a8e107
+>>>>>>> 92b3a363f86417197be316e3c1c484f52116f482
