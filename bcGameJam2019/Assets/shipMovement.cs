@@ -6,9 +6,14 @@ using UnityEngine;
 public class shipMovement : MonoBehaviour
 {
     public float speed;
+    public Camera thiscam;
 
     private Rigidbody2D rb;
     private Vector2 moveVelocity;
+    private float leftbound;
+    private float topbound;
+    private float bottombound;
+    private float rightbound;
 
     float horizontalMove = 0f;
     float verticalMove = 0f;
@@ -17,6 +22,12 @@ public class shipMovement : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        float vertextent = thiscam.orthographicSize;
+        float horzextent = vertextent;
+        leftbound = thiscam.transform.position.x - horzextent;
+        rightbound = thiscam.transform.position.x + horzextent;
+        topbound = thiscam.transform.position.y + vertextent;
+        bottombound = thiscam.transform.position.y - vertextent;
     }
 
     // Update is called once per frame
@@ -24,11 +35,27 @@ public class shipMovement : MonoBehaviour
     {
         Vector2 moveinput = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
         moveVelocity = moveinput.normalized * speed;
-
     }
 
     void FixedUpdate()
     {
-        rb.MovePosition(rb.position + moveVelocity * Time.fixedDeltaTime);
+        Vector2 newpos = rb.position + moveVelocity * Time.fixedDeltaTime;
+        if (newpos.y >= topbound)
+        {
+            newpos.y = topbound;
+        }
+        else if(newpos.y <= bottombound)
+        {
+            newpos.y = bottombound;
+        }
+        if (newpos.x > rightbound)
+        {
+            newpos.x = rightbound;
+        }
+        else if (newpos.x < leftbound)
+        {
+            newpos.x = leftbound;
+        }
+        rb.MovePosition(newpos);
     }
 }
