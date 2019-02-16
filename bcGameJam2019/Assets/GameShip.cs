@@ -27,8 +27,7 @@ public class GameShip : MonoBehaviour
         shipRB = GetComponent<Rigidbody2D>();
         cameraRB = cam.GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
-        xaxis = Input.GetAxisRaw("Horizontal") * shipMoveSpeed;
-        yaxis = Input.GetAxisRaw("Vertical") * shipMoveSpeed + shipScrollSpeed;
+        
     }
 
     void FixedUpdate()
@@ -43,6 +42,8 @@ public class GameShip : MonoBehaviour
         float topBound = cam.transform.position.y + vertextent;
         float bottomBound = cam.transform.position.y - vertextent;
 
+        xaxis = Input.GetAxisRaw("Horizontal") * shipMoveSpeed;
+        yaxis = Input.GetAxisRaw("Vertical") * shipMoveSpeed + shipScrollSpeed;
         Vector2 shipVelocity = new Vector2(xaxis,yaxis);
 
 
