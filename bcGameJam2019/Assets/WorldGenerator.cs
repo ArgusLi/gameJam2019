@@ -12,8 +12,8 @@ public class WorldGenerator{
 
 
 
-    private class World{
-            int N;
+    public class World{
+            public int N;
             public int[,] board;
             public char direction;
             public int posX;
