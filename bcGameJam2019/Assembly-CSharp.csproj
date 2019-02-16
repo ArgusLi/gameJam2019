@@ -60,6 +60,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\cameraScroll.cs" />
     <Compile Include="Assets\ScrollScript.cs" />
     <Compile Include="Assets\shipMovement.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">

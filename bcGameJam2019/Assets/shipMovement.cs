@@ -7,6 +7,7 @@ public class shipMovement : MonoBehaviour
 {
     public float speed;
     public Camera thiscam;
+    public float shipscrollspeed;
 
     private Rigidbody2D rb;
     private Vector2 moveVelocity;
@@ -15,19 +16,19 @@ public class shipMovement : MonoBehaviour
     private float bottombound;
     private float rightbound;
 
-    float horizontalMove = 0f;
-    float verticalMove = 0f;
-
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        // setting bounds for camera
         float vertextent = thiscam.orthographicSize;
         float horzextent = vertextent;
         leftbound = thiscam.transform.position.x - horzextent;
         rightbound = thiscam.transform.position.x + horzextent;
         topbound = thiscam.transform.position.y + vertextent;
         bottombound = thiscam.transform.position.y - vertextent;
+        // setting scrolling speed for speed
+        rb.velocity = thiscam.velocity;
     }
 
     // Update is called once per frame
@@ -39,6 +40,7 @@ public class shipMovement : MonoBehaviour
 
     void FixedUpdate()
     {
+
         Vector2 newpos = rb.position + moveVelocity * Time.fixedDeltaTime;
         if (newpos.y >= topbound)
         {
