@@ -62,6 +62,7 @@
   <ItemGroup>
     <Compile Include="Assets\buttonNextScene.cs" />
     <Compile Include="Assets\EndCamera.cs" />
+    <Compile Include="Assets\endScore.cs" />
     <Compile Include="Assets\GameCamera.cs" />
     <Compile Include="Assets\GameObstacle.cs" />
     <Compile Include="Assets\GamePowerup.cs" />
