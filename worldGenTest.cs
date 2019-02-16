@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-// using System.Random;
 namespace WorldGenTest{
 
     class Test{
@@ -30,41 +29,149 @@ namespace WorldGenTest{
             }
 
             List<char> path = new List<char>();
-            Set<char> s = new Set<char>();
+            List<char> moves = new List<char>();
             for(int i = 0; i < N; i++){
-                s.add('N');
+                moves.Add('N');
             }
+            Random r = new Random();
             int lefts = r.Next(N/2);
             int ups = r.Next(N/2);
             for(int i = 0; i < lefts; i++){
-                s.add('L');
-                s.add('R');
+                moves.Add('L');
+                moves.Add('R');
             }
             for(int i = 0; i < ups; i++){
-                s.add('U');
-                s.add('D');
+                moves.Add('U');
+                moves.Add('D');
             }
 
             bool up = false; 
             bool down = false;
             bool left = false;
             bool right = false;
-
-            while(!s.isEmpty()){
-
+            foreach(World world in worlds){
+                switch(world.direction){
+                    case 'U':
+                        up = true;
+                        break;
+                    case 'D':
+                        down = true;
+                        break;
+                    case 'L':
+                        left = true;
+                        break;
+                    case 'R':
+                        right = true;
+                        break;
+                }
+            }
+            while(moves.Count != 0){
+                int index = r.Next(moves.Count);
+                char dir = moves[index];
+                int vertDisplacement = 0;
+                int horDisplacement = 0;
+                switch(dir){
+                    case 'U':
+                        if(vertDisplacement+1 >= N/2){
+                            continue;
+                        }
+                        vertDisplacement++;
+                        break;
+                    case 'D':
+                        if(vertDisplacement-1 >= N/2){
+                            continue;
+                        }
+                        vertDisplacement--;
+                        break;
+                    case 'L':
+                        if(horDisplacement-1 >= N/2){
+                            continue;
+                        }
+                        horDisplacement--;
+                        break;
+                    case 'R':
+                        if(horDisplacement+1 >= N/2){
+                            continue;
+                        }
+                        horDisplacement++;
+                        break;
+                    case 'N':
+                        if(up){
+                            if(vertDisplacement+1 >= N/2){
+                                continue;
+                            }
+                            vertDisplacement++;
+                        }
+                        if(down){
+                            if(vertDisplacement-1 >= N/2){
+                                continue;
+                            }
+                            vertDisplacement--;
+                        }
+                        if(left){
+                            if(horDisplacement-1 >= N/2){
+                                continue;
+                            }
+                            horDisplacement--;
+                        }
+                        if(right){
+                            if(horDisplacement+1 >= N/2){
+                                continue;
+                            }
+                            horDisplacement++;
+                        }
+                        break;
+                }
+                path.Add(dir);
+                moves.RemoveAt(index);
             }
 
             
 
             for(int i = 0; i < worlds.Length; i++){
-                // write path into world
-
-                // char dir = path.next();
-                // if(dir == 'N'){
-                //     dir = worlds[i].direction;
-                // }
-
-                // logic for u d l r
+				// write path into world
+				int posx;
+				int posy;
+				switch (worlds[i].direction) {
+					case 'L':
+						posx = N-1;
+						posy = N / 2 + 1;
+						break;
+					case 'R':
+						posx = 0;
+						posy = N / 2 + 1;
+						break;
+					case 'U':
+						posy = 0;
+						posx = N / 2 + 1;
+						break;
+					case 'D':
+						posy = N - 1;
+						posx = N / 2 + 1;
+						break;
+				}
+				worlds[i].board[posx, posy] = 0;
+				for (int j = 0; j < path.Count; j++){
+					char move = path[j];
+					if (move == 'N'){
+						move == worlds[i].direction;
+					}
+					switch (move){
+						case 'L':
+							posx--;
+							break;
+						case 'R':
+							posx++;
+							break;
+						case 'U':
+							posy++;
+							break;
+						case 'D':
+							posy--;
+							break;
+					}
+					worlds[i].board[posx, posy] = 0;
+				}
             }
 
 
