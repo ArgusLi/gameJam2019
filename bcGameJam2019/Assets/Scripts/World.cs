@@ -40,6 +40,7 @@ public class World : MonoBehaviour
         return ret;
     }
     public void drawFrame(int[,] board){
+        Debug.Log("Calling World.drawFrame");
         int[,] frame = new int[speed * N, N];
         for (int i = 0; i < N; i++)
         {
@@ -56,8 +57,9 @@ public class World : MonoBehaviour
         //TODO: implement
     }
 
-    public void Start()
+    public void Awake()
     {
+        Debug.Log("Calling World.Awake");
         cam.transform.localPosition = new Vector3(0,0,-0.5f);
         N = transform.parent.gameObject.GetComponent<God>().N;
         board = new int[N, N];

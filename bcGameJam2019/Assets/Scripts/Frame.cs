@@ -35,6 +35,7 @@ public class Frame : MonoBehaviour
     }
 
     public void drawBoard(int[,] board, bool wormhole, float camWidth, int N){
+        Debug.Log("Calling Frame.drawBoard");
         float unit = camWidth/(float)N;
         for(int r = N-1; r >= 0; r--){
             for(int c = 0; c < N; c++){
@@ -58,7 +59,8 @@ public class Frame : MonoBehaviour
 
     }
 
-    void Start() {
+    void Awake() {
+        Debug.Log("Calling Frame.Awake");
         rand = new System.Random();
         powerups = powerupTargets.gameObject.GetComponentsInChildren<Rigidbody2D>();
     }
