@@ -122,7 +122,6 @@ GameObject:
   m_Component:
   - component: {fileID: 59982790}
   - component: {fileID: 59982794}
-  - component: {fileID: 59982795}
   - component: {fileID: 59982793}
   - component: {fileID: 59982792}
   - component: {fileID: 59982791}
@@ -320,6 +319,8 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+<<<<<<< HEAD
+=======
 --- !u!114 &59982795
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -333,6 +334,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tm: {fileID: 59982791}
+>>>>>>> 91052657fb35fa88d75e296eba64975e3f51aea7
 --- !u!1 &550595448
 GameObject:
   m_ObjectHideFlags: 0

@@ -46,7 +46,8 @@ public class GameObstacle : MonoBehaviour
            Rigidbody2D rb = obstacle.AddComponent<Rigidbody2D>();
            rb.freezeRotation = true;
            rb.isKinematic = true;
-           obstacle.AddComponent<PolygonCollider2D>();
+            PolygonCollider2D polcol = obstacle.AddComponent<PolygonCollider2D>();
+            polcol.name = "obstacle";
 
            rb.velocity = new Vector2(0, 3);
 
