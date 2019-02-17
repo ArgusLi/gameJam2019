@@ -60,19 +60,20 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scenes\MainLevelBehaviour.cs" />
-    <Compile Include="Assets\Scripts\buttonNextScene.cs" />
     <Compile Include="Assets\Scripts\EndCamera.cs" />
     <Compile Include="Assets\Scripts\endScore.cs" />
+    <Compile Include="Assets\Scripts\FrameJob.cs" />
     <Compile Include="Assets\Scripts\GameCamera.cs" />
     <Compile Include="Assets\Scripts\GamePowerup.cs" />
     <Compile Include="Assets\Scripts\GameShip.cs" />
+    <Compile Include="Assets\Scripts\MainLevelBehaviour.cs" />
     <Compile Include="Assets\Scripts\ObstacleManager.cs" />
     <Compile Include="Assets\Scripts\PowerupManager.cs" />
     <Compile Include="Assets\Scripts\titleBackgroundScroll.cs" />
     <Compile Include="Assets\Scripts\titleButtonMoveUp.cs" />
     <Compile Include="Assets\Scripts\TitleCamera.cs" />
     <Compile Include="Assets\Scripts\TitleShip.cs" />
+    <Compile Include="Assets\Scripts\UIScript.cs" />
     <Compile Include="Assets\Scripts\WorldGenerator.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
