@@ -40,9 +40,16 @@ public class World : MonoBehaviour
     
     public bool ReadyToDraw() {
         Frame lastFrame = frames[(nextFrame + 2) % 3];
-        if (lastFrame.getPosition().y < posY-10) {
+        Vector2 lastPos = lastFrame.getPosition();
+        float cameraY = cameraRB.position.y;
+        if (lastPos.y == 0f) {
+            Debug.Log("Ready: never drawn");
+            return true;
+        } else if (lastPos.y < cameraY - 10) {
+            Debug.Log("Ready: offscreen ()");
             return true;
         } else {
+            Debug.Log("Not ready: onscreen: frame=" + lastPos.y.ToString() + ", camera=" + cameraY.ToString());
             return false;
         }
     }
@@ -60,9 +67,9 @@ public class World : MonoBehaviour
                 }
             }
         }
+        frames[nextFrame].setPosition(new Vector2(posX, posY+10));
         frames[nextFrame].drawBoard(frame, wormhole, cam.rect.width, N);
-        frames[nextFrame].setPosition(new Vector2(posX, posY+10)); //TODO: change
-        frames[nextFrame].setVelocity(new Vector2(0, 2));
+        frames[nextFrame].setVelocity(new Vector2(0, -2));
         
         nextFrame = (nextFrame + 1) % 3;
     }
