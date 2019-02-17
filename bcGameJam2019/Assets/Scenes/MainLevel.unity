@@ -156,8 +156,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 795f66faa2b354aa2ad1a815b66c880c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
 --- !u!64 &57723265
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -258,8 +258,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 523f135f80b63409ab13a20e482ec12d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   asteroid1: {fileID: 711643592}
   asteroid2: {fileID: 2077419381}
   powerupTargets: {fileID: 1769049774}
@@ -304,8 +304,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 523f135f80b63409ab13a20e482ec12d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   asteroid1: {fileID: 711643592}
   asteroid2: {fileID: 2077419381}
   powerupTargets: {fileID: 1769049774}
@@ -355,11 +355,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 851740bf22d70474a8119c59e5d3ba01, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   cam: {fileID: 1783466675}
   N: 0
   direction: 0
+  quadPos: 2
 --- !u!1 &218994950
 GameObject:
   m_ObjectHideFlags: 0
@@ -404,8 +405,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 795f66faa2b354aa2ad1a815b66c880c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
 --- !u!64 &218994953
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -565,8 +566,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7fd7f3e9a8eeb440185e3adc3c6312aa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   cam: {fileID: 519420031}
   shipMoveSpeed: 3
   shipScrollSpeed: 0
@@ -671,7 +672,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
-  m_WarningMessage: 
+  m_WarningMessage:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
@@ -716,8 +717,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 523f135f80b63409ab13a20e482ec12d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   asteroid1: {fileID: 711643592}
   asteroid2: {fileID: 2077419381}
   powerupTargets: {fileID: 1769049774}
@@ -757,7 +758,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
-  m_WarningMessage: 
+  m_WarningMessage:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
@@ -840,8 +841,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7fd7f3e9a8eeb440185e3adc3c6312aa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   cam: {fileID: 1651150274}
   shipMoveSpeed: 3
   shipScrollSpeed: 0
@@ -967,7 +968,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
-  m_WarningMessage: 
+  m_WarningMessage:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
@@ -1050,8 +1051,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7fd7f3e9a8eeb440185e3adc3c6312aa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   cam: {fileID: 1783466675}
   shipMoveSpeed: 3
   shipScrollSpeed: 0
@@ -1135,7 +1136,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 423979373}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 26.094587, y: -1.1757698, z: -0.2599971}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_Children: []
   m_Father: {fileID: 86084037}
@@ -1280,8 +1281,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 92e764477292d4fbfb0e1272cab94f6d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   shipScrollSpeed: 0
 --- !u!20 &519420031
 Camera:
@@ -1301,10 +1302,10 @@ Camera:
   m_FocalLength: 50
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0.25
-    y: 0.5
-    width: 0.25
-    height: 1
+    x: 0
+    y: 0
+    width: 0.5
+    height: 0.5
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
@@ -1405,8 +1406,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 795f66faa2b354aa2ad1a815b66c880c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
 --- !u!64 &591204085
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1510,8 +1511,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 795f66faa2b354aa2ad1a815b66c880c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
 --- !u!64 &645376438
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1612,8 +1613,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 523f135f80b63409ab13a20e482ec12d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   asteroid1: {fileID: 711643592}
   asteroid2: {fileID: 2077419381}
   powerupTargets: {fileID: 1769049774}
@@ -1759,8 +1760,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 523f135f80b63409ab13a20e482ec12d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   asteroid1: {fileID: 711643592}
   asteroid2: {fileID: 2077419381}
   powerupTargets: {fileID: 1769049774}
@@ -1810,11 +1811,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 851740bf22d70474a8119c59e5d3ba01, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   cam: {fileID: 1651150274}
   N: 0
   direction: 0
+  quadPos: 3
 --- !u!1 &883284186
 GameObject:
   m_ObjectHideFlags: 0
@@ -1856,8 +1858,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 523f135f80b63409ab13a20e482ec12d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   asteroid1: {fileID: 711643592}
   asteroid2: {fileID: 2077419381}
   powerupTargets: {fileID: 1769049774}
@@ -2008,11 +2010,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 851740bf22d70474a8119c59e5d3ba01, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   cam: {fileID: 519420031}
   N: 0
   direction: 0
+  quadPos: 1
 --- !u!1 &1175690086
 GameObject:
   m_ObjectHideFlags: 0
@@ -2051,9 +2054,9 @@ Camera:
   m_FocalLength: 50
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0.25
+    x: 0.5
     y: 0
-    width: 0.25
+    width: 0.5
     height: 0.5
   near clip plane: 0.3
   far clip plane: 1000
@@ -2085,8 +2088,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 92e764477292d4fbfb0e1272cab94f6d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   shipScrollSpeed: 0
 --- !u!50 &1175690089
 Rigidbody2D:
@@ -2173,8 +2176,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 523f135f80b63409ab13a20e482ec12d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   asteroid1: {fileID: 711643592}
   asteroid2: {fileID: 2077419381}
   powerupTargets: {fileID: 1769049774}
@@ -2251,8 +2254,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 523f135f80b63409ab13a20e482ec12d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   asteroid1: {fileID: 711643592}
   asteroid2: {fileID: 2077419381}
   powerupTargets: {fileID: 1769049774}
@@ -2398,8 +2401,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 523f135f80b63409ab13a20e482ec12d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   asteroid1: {fileID: 711643592}
   asteroid2: {fileID: 2077419381}
   powerupTargets: {fileID: 1769049774}
@@ -2441,10 +2444,10 @@ Camera:
   m_FocalLength: 50
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0.25
+    x: 0
     y: 0.5
-    width: 0.25
-    height: 1
+    width: 0.5
+    height: 0.5
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
@@ -2475,8 +2478,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 92e764477292d4fbfb0e1272cab94f6d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   shipScrollSpeed: 0
 --- !u!50 &1651150276
 Rigidbody2D:
@@ -2558,7 +2561,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
-  m_WarningMessage: 
+  m_WarningMessage:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
@@ -2579,7 +2582,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.15, y: 2.36}
+    oldSize: {x: 2.17, y: 3}
     newSize: {x: 2.19, y: 2.35}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -2641,8 +2644,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7fd7f3e9a8eeb440185e3adc3c6312aa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   cam: {fileID: 1175690087}
   shipMoveSpeed: 3
   shipScrollSpeed: 0
@@ -2773,8 +2776,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 523f135f80b63409ab13a20e482ec12d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   asteroid1: {fileID: 711643592}
   asteroid2: {fileID: 2077419381}
   powerupTargets: {fileID: 1769049774}
@@ -2951,9 +2954,9 @@ Camera:
   m_FocalLength: 50
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0.25
-    y: 0
-    width: 0.25
+    x: 0.5
+    y: 0.5
+    width: 0.5
     height: 0.5
   near clip plane: 0.3
   far clip plane: 1000
@@ -2985,8 +2988,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 92e764477292d4fbfb0e1272cab94f6d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   shipScrollSpeed: 0
 --- !u!50 &1783466677
 Rigidbody2D:
@@ -3078,11 +3081,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 851740bf22d70474a8119c59e5d3ba01, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   cam: {fileID: 1175690087}
   N: 0
   direction: 0
+  quadPos: 0
 --- !u!1 &1987239060
 GameObject:
   m_ObjectHideFlags: 0
@@ -3110,8 +3114,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e9ac8df34a7054511aea24f8b9076013, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   N: 9
 --- !u!4 &1987239062
 Transform:
@@ -3172,8 +3176,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 523f135f80b63409ab13a20e482ec12d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   asteroid1: {fileID: 711643592}
   asteroid2: {fileID: 2077419381}
   powerupTargets: {fileID: 1769049774}
@@ -3218,8 +3222,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 523f135f80b63409ab13a20e482ec12d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   asteroid1: {fileID: 711643592}
   asteroid2: {fileID: 2077419381}
   powerupTargets: {fileID: 1769049774}

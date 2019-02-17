@@ -70,10 +70,11 @@ public class GameShip : MonoBehaviour
         endTime = Time.unscaledTime;
         animator.SetBool("isTriggered", true);
         deltaTime = endTime - startTime;
-        StartCoroutine(LoadAfterDelay());
+        god.crash(deltaTime, this);
+        //StartCoroutine(LoadAfterDelay());
     }
 
-    void respawn(){
+    public void respawn(){
         startTime = Time.unscaledTime;
     }
 
@@ -87,14 +88,6 @@ public class GameShip : MonoBehaviour
         {  
             world.Rotate();
         }
-        // else if (col.name.Equals("swap"))
-        // {
-        //     world.Swap();
-        // }
-        // else if (col.name.Equals("sync2"))
-        // {
-        //     world.sync();
-        // }
         else if (col.name.Equals("sync4"))
         {
             world.Sync();
@@ -110,13 +103,5 @@ public class GameShip : MonoBehaviour
 
     }
 
-    IEnumerator LoadAfterDelay() {
-        yield return new WaitForSecondsRealtime(1);
-        UnityEngine.SceneManagement.SceneManager.LoadScene("End");
-    }
-
-    void OnDisable()
-    {
-        PlayerPrefs.SetFloat("score", deltaTime);
-    }
+    
 }

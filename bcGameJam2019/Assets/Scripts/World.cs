@@ -3,13 +3,24 @@ using System.Collections.Generic;
 using System;
 using UnityEngine;
 
+public enum QuadPos
+{
+    BottomLeft,
+    TopLeft,
+    BottomRight,
+    TopRight
+}
+
 public class World : MonoBehaviour
 {
     public Camera cam;
     public int[,] board;
     public int N;
     public char direction;
+
+    public QuadPos quadPos;
     
+    private bool started;
     private List<int[,]> boards;
     private Frame[] frames;
     private int posX;
@@ -88,6 +99,8 @@ public class World : MonoBehaviour
         nextFrame = 0;
         frames = gameObject.GetComponentsInChildren<Frame>();
         cameraRB = cam.GetComponent<Rigidbody2D>();
+        SetCamera();
+        started = false;
     }
 
     public void enterWormhole(){
@@ -115,6 +128,66 @@ public class World : MonoBehaviour
                 world.GetSynced(direction, speed);
             }
         }
+    }
+
+    public void SetCamera()
+    {
+        float width = 0.0f;
+        float height = 0.0f;
+        float x = 0.0f;
+        float y = 0.0f;
+        float halfWidth = Screen.width / 2.0f;
+        float halfHeight = Screen.height / 2.0f;
+        if (Screen.width < Screen.height)
+        {
+            width = Screen.width / 2.0f;
+            height = width;
+            switch (quadPos)
+            {
+                case QuadPos.BottomLeft:
+                    x = 0;
+                    y = halfHeight - halfWidth;
+                    break;
+                case QuadPos.BottomRight:
+                    x = halfWidth;
+                    y = halfHeight - halfWidth;
+                    break;
+                case QuadPos.TopLeft:
+                    x = 0;
+                    y = halfHeight;
+                    break;
+                case QuadPos.TopRight:
+                    x = halfWidth;
+                    y = halfHeight;
+                    break;
+            }
+        }
+        else
+        {
+            height = Screen.height / 2.0f;
+            width = height;
+            switch (quadPos)
+            {
+                case QuadPos.BottomLeft:
+                    x = halfWidth - halfHeight;
+                    y = 0;
+                    break;
+                case QuadPos.BottomRight:
+                    x = halfWidth;
+                    y = 0;
+                    break;
+                case QuadPos.TopLeft:
+                    x = halfWidth - halfHeight;
+                    y = halfHeight;
+                    break;
+                case QuadPos.TopRight:
+                    x = halfWidth;
+                    y = halfHeight;
+                    break;
+            }
+        }
+        cam.pixelRect = new Rect(x, y, width, height);
+
     }
 
     public void GetSynced(char direction, int speed){
