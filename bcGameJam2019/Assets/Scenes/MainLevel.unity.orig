@@ -263,7 +263,11 @@ MonoBehaviour:
   asteroid1: {fileID: 711643592}
   asteroid2: {fileID: 2077419381}
   powerupTargets: {fileID: 1769049774}
+<<<<<<< HEAD
   batteryTarget: {fileID: 0}
+=======
+  batteryTarget: {fileID: 710903622}
+>>>>>>> 90174bfae07a8edac9b0208d1185a4f8c6109d70
 --- !u!1 &77709459
 GameObject:
   m_ObjectHideFlags: 0
@@ -310,7 +314,11 @@ MonoBehaviour:
   asteroid1: {fileID: 711643592}
   asteroid2: {fileID: 2077419381}
   powerupTargets: {fileID: 1769049774}
+<<<<<<< HEAD
+  batteryTarget: {fileID: 0}
+=======
   batteryTarget: {fileID: 710903622}
+>>>>>>> 90174bfae07a8edac9b0208d1185a4f8c6109d70
 --- !u!1 &86084036
 GameObject:
   m_ObjectHideFlags: 0
@@ -724,7 +732,11 @@ MonoBehaviour:
   asteroid1: {fileID: 711643592}
   asteroid2: {fileID: 2077419381}
   powerupTargets: {fileID: 1769049774}
+<<<<<<< HEAD
+  batteryTarget: {fileID: 0}
+=======
   batteryTarget: {fileID: 710903622}
+>>>>>>> 90174bfae07a8edac9b0208d1185a4f8c6109d70
 --- !u!1 &341246255
 GameObject:
   m_ObjectHideFlags: 0
@@ -1621,7 +1633,11 @@ MonoBehaviour:
   asteroid1: {fileID: 711643592}
   asteroid2: {fileID: 2077419381}
   powerupTargets: {fileID: 1769049774}
+<<<<<<< HEAD
+  batteryTarget: {fileID: 0}
+=======
   batteryTarget: {fileID: 710903622}
+>>>>>>> 90174bfae07a8edac9b0208d1185a4f8c6109d70
 --- !u!1 &710903622
 GameObject:
   m_ObjectHideFlags: 0
@@ -1870,7 +1886,11 @@ MonoBehaviour:
   asteroid1: {fileID: 711643592}
   asteroid2: {fileID: 2077419381}
   powerupTargets: {fileID: 1769049774}
+<<<<<<< HEAD
+  batteryTarget: {fileID: 0}
+=======
   batteryTarget: {fileID: 710903622}
+>>>>>>> 90174bfae07a8edac9b0208d1185a4f8c6109d70
 --- !u!1 &724704307
 GameObject:
   m_ObjectHideFlags: 0
@@ -1969,7 +1989,11 @@ MonoBehaviour:
   asteroid1: {fileID: 711643592}
   asteroid2: {fileID: 2077419381}
   powerupTargets: {fileID: 1769049774}
+<<<<<<< HEAD
+  batteryTarget: {fileID: 0}
+=======
   batteryTarget: {fileID: 710903622}
+>>>>>>> 90174bfae07a8edac9b0208d1185a4f8c6109d70
 --- !u!1 &918243276
 GameObject:
   m_ObjectHideFlags: 0
@@ -2399,7 +2423,11 @@ MonoBehaviour:
   asteroid1: {fileID: 711643592}
   asteroid2: {fileID: 2077419381}
   powerupTargets: {fileID: 1769049774}
+<<<<<<< HEAD
+  batteryTarget: {fileID: 0}
+=======
   batteryTarget: {fileID: 710903622}
+>>>>>>> 90174bfae07a8edac9b0208d1185a4f8c6109d70
 --- !u!1 &1462122763
 GameObject:
   m_ObjectHideFlags: 0
@@ -2478,7 +2506,11 @@ MonoBehaviour:
   asteroid1: {fileID: 711643592}
   asteroid2: {fileID: 2077419381}
   powerupTargets: {fileID: 1769049774}
+<<<<<<< HEAD
+  batteryTarget: {fileID: 0}
+=======
   batteryTarget: {fileID: 710903622}
+>>>>>>> 90174bfae07a8edac9b0208d1185a4f8c6109d70
 --- !u!1 &1559152229
 GameObject:
   m_ObjectHideFlags: 0
@@ -2626,7 +2658,11 @@ MonoBehaviour:
   asteroid1: {fileID: 711643592}
   asteroid2: {fileID: 2077419381}
   powerupTargets: {fileID: 1769049774}
+<<<<<<< HEAD
+  batteryTarget: {fileID: 0}
+=======
   batteryTarget: {fileID: 710903622}
+>>>>>>> 90174bfae07a8edac9b0208d1185a4f8c6109d70
 --- !u!1 &1651150273
 GameObject:
   m_ObjectHideFlags: 0
@@ -3002,7 +3038,11 @@ MonoBehaviour:
   asteroid1: {fileID: 711643592}
   asteroid2: {fileID: 2077419381}
   powerupTargets: {fileID: 1769049774}
+<<<<<<< HEAD
+  batteryTarget: {fileID: 0}
+=======
   batteryTarget: {fileID: 710903622}
+>>>>>>> 90174bfae07a8edac9b0208d1185a4f8c6109d70
 --- !u!1 &1769049774
 GameObject:
   m_ObjectHideFlags: 0
@@ -3403,7 +3443,11 @@ MonoBehaviour:
   asteroid1: {fileID: 711643592}
   asteroid2: {fileID: 2077419381}
   powerupTargets: {fileID: 1769049774}
+<<<<<<< HEAD
+  batteryTarget: {fileID: 0}
+=======
   batteryTarget: {fileID: 710903622}
+>>>>>>> 90174bfae07a8edac9b0208d1185a4f8c6109d70
 --- !u!1 &2073065904
 GameObject:
   m_ObjectHideFlags: 0
@@ -3450,7 +3494,11 @@ MonoBehaviour:
   asteroid1: {fileID: 711643592}
   asteroid2: {fileID: 2077419381}
   powerupTargets: {fileID: 1769049774}
+<<<<<<< HEAD
+  batteryTarget: {fileID: 0}
+=======
   batteryTarget: {fileID: 710903622}
+>>>>>>> 90174bfae07a8edac9b0208d1185a4f8c6109d70
 --- !u!1 &2077419381
 GameObject:
   m_ObjectHideFlags: 0

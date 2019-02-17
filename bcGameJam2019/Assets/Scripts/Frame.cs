@@ -33,16 +33,16 @@ public class Frame : MonoBehaviour
     }
 
     private void drawPowerup(float x, float y) {
-        GameObject powerup;
+        GameObject powerup = null;
         if (!Constants.getEnergy())
         {
             int i = rand.Next() % powerupBodies.Length;
 
-            powerup = GameObject.Instantiate(powerups[i].gameObject, new Vector3(x, y, 0), Quaternion.identity, transform);
+            powerup = GameObject.Instantiate(powerupBodies[i].gameObject, new Vector3(x, y, 0), Quaternion.identity, transform);
         }
         else
         {
-            //powerup = GameObject.Instantiate()
+            powerup = GameObject.Instantiate(batteryTarget.gameObject, new Vector3(x, y, 0), Quaternion.identity, transform);
         }
         
         
