@@ -38,11 +38,11 @@ public class Frame : MonoBehaviour
         {
             int i = rand.Next() % powerupBodies.Length;
 
-            powerup = GameObject.Instantiate(powerups[i].gameObject, new Vector3(x, y, 0), Quaternion.identity, transform);
+            powerup = GameObject.Instantiate(powerupBodies[i].gameObject, new Vector3(x, y, 0), Quaternion.identity, transform);
         }
         else
         {
-            //powerup = GameObject.Instantiate()
+            powerup = GameObject.Instantiate(batteryTarget.gameObject, new Vector3(x, y, 0), Quaternion.identity, transform);
         }
         
         
