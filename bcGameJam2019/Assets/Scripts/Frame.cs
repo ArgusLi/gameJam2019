@@ -33,7 +33,7 @@ public class Frame : MonoBehaviour
     }
 
     private void drawPowerup(float x, float y) {
-        GameObject powerup;
+        GameObject powerup = null;
         if (!Constants.getEnergy())
         {
             int i = rand.Next() % powerupBodies.Length;
