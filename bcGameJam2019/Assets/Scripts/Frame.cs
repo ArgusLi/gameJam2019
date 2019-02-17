@@ -46,9 +46,11 @@ public class Frame : MonoBehaviour
         }
         
         
+        /*
         powerup.transform.localPosition = new Vector3(x, y, 0);
         powerup.transform.localScale = scale;
         powerups.Add(powerup);
+        */
     }
 
     public void drawBoard(int[,] board, bool wormhole, float camWidth, int N){
