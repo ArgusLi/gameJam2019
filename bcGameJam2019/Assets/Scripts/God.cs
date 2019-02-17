@@ -41,5 +41,12 @@ public class God : MonoBehaviour
     void OnDisable()
     {
         PlayerPrefs.SetFloat("score", runningScoreTotal);
+    void Update() {
+        for(int i = 0; i < worlds.Length; i++) {
+            if (!worlds[i].ReadyToDraw()) {
+                return;
+            }
+        }   
+        launchNextFrame();
     }
 }
