@@ -13,7 +13,7 @@ public class Frame : MonoBehaviour
     private Rigidbody2D[] powerups;
     private System.Random rand;
 
-    private void drawAsteroid(float x, float y){
+    private void drawAsteroid(float x, float y) {
         int i = rand.Next();
         GameObject asteroid;
         if(i%2 == 0){
@@ -25,7 +25,7 @@ public class Frame : MonoBehaviour
         asteroid.transform.localPosition = new Vector3(x, y, 0);
     }
 
-    private void drawPowerup(float x, float y){
+    private void drawPowerup(float x, float y) {
         GameObject powerup;
         int i = rand.Next()%powerups.Length;
         
@@ -46,7 +46,7 @@ public class Frame : MonoBehaviour
                     break;
                     case 2:
                         if(wormhole){
-                            // Draw wormhole at x, y
+                            //TODO Draw wormhole at x, y
                         }
                     break;
                     case 3:
@@ -58,9 +58,7 @@ public class Frame : MonoBehaviour
 
     }
 
-    // Start is called before the first frame update
-    void Start()
-    {
+    void Start() {
         rand = new System.Random();
         powerups = powerupTargets.gameObject.GetComponentsInChildren<Rigidbody2D>();
     }

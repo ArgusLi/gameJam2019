@@ -5,19 +5,19 @@ using UnityEngine;
 
 public class World : MonoBehaviour
 {
-    public int N;
-    public bool started;
-    public int[,] board;
-    public List<int[,]> boards;
-    public Frame[] frames;
     public Camera cam;
+    public int[,] board;
+    public int N;
     public char direction;
-    public int posX;
-    public int posY;
-    public int speed;
-    public bool wormhole;
-    public int nextFrame;
     
+    private bool started;
+    private List<int[,]> boards;
+    private Frame[] frames;
+    private int posX;
+    private int posY;
+    private int speed;
+    private bool wormhole;
+    private int nextFrame;
     private Rigidbody2D cameraRB;
 
     public override string ToString(){
@@ -58,7 +58,6 @@ public class World : MonoBehaviour
 
     public void Start()
     {
-        Debug.Log("Hello");
         cam.transform.localPosition = new Vector3(0,0,-0.5f);
         N = transform.parent.gameObject.GetComponent<God>().N;
         board = new int[N, N];
