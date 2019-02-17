@@ -572,6 +572,7 @@ MonoBehaviour:
   shipMoveSpeed: 3
   shipScrollSpeed: 0
   world: {fileID: 987235164}
+  god: {fileID: 1987239061}
   deltaTime: 0
 --- !u!50 &229357067
 Rigidbody2D:
@@ -846,6 +847,7 @@ MonoBehaviour:
   shipMoveSpeed: 3
   shipScrollSpeed: 0
   world: {fileID: 724704309}
+  god: {fileID: 1987239061}
   deltaTime: 0
 --- !u!50 &341246259
 Rigidbody2D:
@@ -1055,6 +1057,7 @@ MonoBehaviour:
   shipMoveSpeed: 3
   shipScrollSpeed: 0
   world: {fileID: 86084038}
+  god: {fileID: 1987239061}
   deltaTime: 0
 --- !u!50 &423979377
 Rigidbody2D:
@@ -2647,6 +2650,7 @@ MonoBehaviour:
   shipMoveSpeed: 3
   shipScrollSpeed: 0
   world: {fileID: 1855224526}
+  god: {fileID: 1987239061}
   deltaTime: 0
 --- !u!50 &1666694148
 Rigidbody2D:

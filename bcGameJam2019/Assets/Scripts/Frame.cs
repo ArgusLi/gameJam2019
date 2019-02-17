@@ -10,6 +10,7 @@ public class Frame : MonoBehaviour
     public GameObject asteroid2;
     public GameObject powerupTargets;
 
+    private Rigidbody2D frameRB;
     private Rigidbody2D[] powerups;
     private System.Random rand;
 
@@ -35,11 +36,12 @@ public class Frame : MonoBehaviour
     }
 
     public void drawBoard(int[,] board, bool wormhole, float camWidth, int N){
+        //Debug.Log("Calling Frame.drawBoard");
         float unit = camWidth/(float)N;
         for(int r = N-1; r >= 0; r--){
             for(int c = 0; c < N; c++){
                 float x = unit*c;
-                float y =  unit*r;
+                float y = unit*r;
                 switch(board[r, c]){
                     case 1:
                         drawAsteroid(x, y);
@@ -57,10 +59,24 @@ public class Frame : MonoBehaviour
         }
 
     }
+    
+    public Vector2 getPosition() {
+        return frameRB.position;
+    }
+    
+    public void setPosition(Vector2 p) {
+        frameRB.MovePosition(p);
+    }
+    
+    public void setVelocity(Vector2 v) {
+        frameRB.velocity = v;
+    }
 
-    void Start() {
+    void Awake() {
+        Debug.Log("Calling Frame.Awake");
         rand = new System.Random();
         powerups = powerupTargets.gameObject.GetComponentsInChildren<Rigidbody2D>();
+        frameRB = gameObject.AddComponent<Rigidbody2D>();
     }
 
 }
