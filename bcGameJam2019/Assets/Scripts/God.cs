@@ -10,6 +10,7 @@ public class God : MonoBehaviour
     private float runningScoreTotal;
     private int energy;
     private GameShip crashed;
+    private bool readyToRevive;
 
     void launchNextFrame()
     {
@@ -30,6 +31,7 @@ public class God : MonoBehaviour
             worlds[i].transform.localPosition = new Vector3(100 * i+100, 0, 0);
         }
         crashed = null;
+        readyToRevive = false;
     }
 
     //TODO: when ready, call launchNextFrame
@@ -63,6 +65,9 @@ public class God : MonoBehaviour
             }
         }
         launchNextFrame();
+        if (readyToRevive) {
+            Revive();
+        }
     }
 
     void CollectEnergy()
@@ -70,7 +75,7 @@ public class God : MonoBehaviour
         energy++;
         if(energy >= 3)
         {
-            Revive();
+            readyToRevive = true;
         }
     }
 
