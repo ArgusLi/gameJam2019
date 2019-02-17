@@ -60,16 +60,21 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\buttonNextScene.cs" />
-    <Compile Include="Assets\EndCamera.cs" />
-    <Compile Include="Assets\endScore.cs" />
-    <Compile Include="Assets\GameCamera.cs" />
-    <Compile Include="Assets\GameObstacle.cs" />
-    <Compile Include="Assets\GamePowerup.cs" />
-    <Compile Include="Assets\GameShip.cs" />
-    <Compile Include="Assets\ObstacleManager.cs" />
-    <Compile Include="Assets\PowerupManager.cs" />
     <Compile Include="Assets\Scenes\MainLevelBehaviour.cs" />
+    <Compile Include="Assets\Scripts\buttonNextScene.cs" />
+    <Compile Include="Assets\Scripts\EndCamera.cs" />
+    <Compile Include="Assets\Scripts\endScore.cs" />
+    <Compile Include="Assets\Scripts\GameCamera.cs" />
+    <Compile Include="Assets\Scripts\GameObstacle.cs" />
+    <Compile Include="Assets\Scripts\GamePowerup.cs" />
+    <Compile Include="Assets\Scripts\GameShip.cs" />
+    <Compile Include="Assets\Scripts\ObstacleManager.cs" />
+    <Compile Include="Assets\Scripts\PowerupManager.cs" />
+    <Compile Include="Assets\Scripts\titleBackgroundScroll.cs" />
+    <Compile Include="Assets\Scripts\titleButtonMoveUp.cs" />
+    <Compile Include="Assets\Scripts\TitleCamera.cs" />
+    <Compile Include="Assets\Scripts\TitleShip.cs" />
+    <Compile Include="Assets\Scripts\WorldGenerator.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />
@@ -103,11 +108,6 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeB.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexZoom.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\WarpTextExample.cs" />
-    <Compile Include="Assets\titleBackgroundScroll.cs" />
-    <Compile Include="Assets\titleButtonMoveUp.cs" />
-    <Compile Include="Assets\TitleCamera.cs" />
-    <Compile Include="Assets\TitleShip.cs" />
-    <Compile Include="Assets\WorldGenerator.cs" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap-Mobile.shader" />
     <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Anton OFL.txt" />
@@ -130,13 +130,13 @@
     <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\LiberationSans - OFL.txt" />
     <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Bangers - OFL.txt" />
     <Reference Include="Unity.PackageManagerUI.Editor">
-      <HintPath>/Users/argus/Documents/OneDrive - sfu.ca/Game Jam/gameJam2019/gameJam2019/bcGameJam2019/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+      <HintPath>/Users/vivian/Documents/GitHub/gameJam2019/bcGameJam2019/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.CollabProxy.Editor">
-      <HintPath>/Users/argus/Documents/OneDrive - sfu.ca/Game Jam/gameJam2019/gameJam2019/bcGameJam2019/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+      <HintPath>/Users/vivian/Documents/GitHub/gameJam2019/bcGameJam2019/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.DataPrivacy">
-      <HintPath>/Users/argus/Documents/OneDrive - sfu.ca/Game Jam/gameJam2019/gameJam2019/bcGameJam2019/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
+      <HintPath>/Users/vivian/Documents/GitHub/gameJam2019/bcGameJam2019/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -343,19 +343,19 @@
       <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
     </Reference>
     <Reference Include="TextMeshPro-2017.3-Editor">
-      <HintPath>/Users/argus/Documents/OneDrive - sfu.ca/Game Jam/gameJam2019/gameJam2019/bcGameJam2019/Assets/TextMesh Pro/Plugins/Editor DLL/TextMeshPro-2017.3-Editor.dll</HintPath>
+      <HintPath>/Users/vivian/Documents/GitHub/gameJam2019/bcGameJam2019/Assets/TextMesh Pro/Plugins/Editor DLL/TextMeshPro-2017.3-Editor.dll</HintPath>
     </Reference>
     <Reference Include="TextMeshPro-2017.3-Runtime">
-      <HintPath>/Users/argus/Documents/OneDrive - sfu.ca/Game Jam/gameJam2019/gameJam2019/bcGameJam2019/Assets/TextMesh Pro/Plugins/Editor DLL/TextMeshPro-2017.3-Runtime.dll</HintPath>
+      <HintPath>/Users/vivian/Documents/GitHub/gameJam2019/bcGameJam2019/Assets/TextMesh Pro/Plugins/Editor DLL/TextMeshPro-2017.3-Runtime.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.Tracker">
-      <HintPath>/Users/argus/Documents/OneDrive - sfu.ca/Game Jam/gameJam2019/gameJam2019/bcGameJam2019/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll</HintPath>
+      <HintPath>/Users/vivian/Documents/GitHub/gameJam2019/bcGameJam2019/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.Editor">
-      <HintPath>/Users/argus/Documents/OneDrive - sfu.ca/Game Jam/gameJam2019/gameJam2019/bcGameJam2019/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Editor.dll</HintPath>
+      <HintPath>/Users/vivian/Documents/GitHub/gameJam2019/bcGameJam2019/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.StandardEvents">
-      <HintPath>/Users/argus/Documents/OneDrive - sfu.ca/Game Jam/gameJam2019/gameJam2019/bcGameJam2019/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.StandardEvents.dll</HintPath>
+      <HintPath>/Users/vivian/Documents/GitHub/gameJam2019/bcGameJam2019/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>/Applications/Unity/Unity.app/Contents/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
