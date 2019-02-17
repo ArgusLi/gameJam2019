@@ -6,6 +6,7 @@ public class World : MonoBehaviour
 {
     public int N;
     public int[,] board;
+    List<int[,]> frames;
     public char direction;
     public int posX;
     public int posY;
@@ -39,6 +40,11 @@ public class World : MonoBehaviour
             ret += "\n";
         }
         return ret;
+    }
+    public void drawFrame(int[,] board){
+        if(!wormhole){
+            
+        }
     }
 }
 
