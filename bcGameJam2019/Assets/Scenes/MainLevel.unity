@@ -1174,9 +1174,9 @@ Camera:
   m_FocalLength: 50
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0.24
+    x: 0.25
     y: 0.5
-    width: 0.26
+    width: 0.25
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
@@ -1664,7 +1664,6 @@ Transform:
   - {fileID: 883284187}
   - {fileID: 1642554103}
   - {fileID: 1753017877}
-  - {fileID: 2069952285}
   m_Father: {fileID: 1987239062}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1728,9 +1727,9 @@ Camera:
   m_FocalLength: 50
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0.24
+    x: 0.25
     y: 0
-    width: 0.26
+    width: 0.25
     height: 0.5
   near clip plane: 0.3
   far clip plane: 1000
@@ -2117,9 +2116,9 @@ Camera:
   m_FocalLength: 50
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0.5
+    x: 0.25
     y: 0.5
-    width: 0.26
+    width: 0.25
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
@@ -2625,9 +2624,9 @@ Camera:
   m_FocalLength: 50
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0.5
+    x: 0.25
     y: 0
-    width: 0.26
+    width: 0.25
     height: 0.5
   near clip plane: 0.3
   far clip plane: 1000
@@ -2854,8 +2853,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 523f135f80b63409ab13a20e482ec12d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  asteroid1: {fileID: 963700337}
-  asteroid2: {fileID: 1570191809}
+  asteroid1: {fileID: 0}
+  asteroid2: {fileID: 0}
   powerupTargets: {fileID: 0}
 --- !u!1 &2073065904
 GameObject:
