@@ -100,7 +100,7 @@ public class Frame : MonoBehaviour
         powerupBodies = powerupTargets.gameObject.GetComponentsInChildren<Rigidbody2D>();
         frameRB = gameObject.AddComponent<Rigidbody2D>();
         frameRB.isKinematic = true;
-        scale = new Vector3(0.2f, 0.2f, 1);
+        scale = new Vector3(0.5f, 0.5f, 1);
     }
 
 }
