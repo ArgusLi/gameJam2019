@@ -72,6 +72,7 @@
     <Compile Include="Assets\Scripts\GamePowerup.cs" />
     <Compile Include="Assets\Scripts\GameShip.cs" />
     <Compile Include="Assets\Scripts\God.cs" />
+    <Compile Include="Assets\Scripts\leaderboardScores.cs" />
     <Compile Include="Assets\Scripts\MainLevelBehaviour.cs" />
     <Compile Include="Assets\Scripts\Scrolling.cs" />
     <Compile Include="Assets\Scripts\titleBackgroundScroll.cs" />
@@ -136,13 +137,13 @@
     <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\LiberationSans - OFL.txt" />
     <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Bangers - OFL.txt" />
     <Reference Include="Unity.PackageManagerUI.Editor">
-      <HintPath>/Users/vivian/Documents/GitHub/gameJam2019/bcGameJam2019/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+      <HintPath>/Users/argus/Documents/OneDrive - sfu.ca/Game Jam/gameJam2019/gameJam2019/bcGameJam2019/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.CollabProxy.Editor">
-      <HintPath>/Users/vivian/Documents/GitHub/gameJam2019/bcGameJam2019/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+      <HintPath>/Users/argus/Documents/OneDrive - sfu.ca/Game Jam/gameJam2019/gameJam2019/bcGameJam2019/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.DataPrivacy">
-      <HintPath>/Users/vivian/Documents/GitHub/gameJam2019/bcGameJam2019/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
+      <HintPath>/Users/argus/Documents/OneDrive - sfu.ca/Game Jam/gameJam2019/gameJam2019/bcGameJam2019/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -349,19 +350,19 @@
       <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
     </Reference>
     <Reference Include="TextMeshPro-2017.3-Editor">
-      <HintPath>/Users/vivian/Documents/GitHub/gameJam2019/bcGameJam2019/Assets/TextMesh Pro/Plugins/Editor DLL/TextMeshPro-2017.3-Editor.dll</HintPath>
+      <HintPath>/Users/argus/Documents/OneDrive - sfu.ca/Game Jam/gameJam2019/gameJam2019/bcGameJam2019/Assets/TextMesh Pro/Plugins/Editor DLL/TextMeshPro-2017.3-Editor.dll</HintPath>
     </Reference>
     <Reference Include="TextMeshPro-2017.3-Runtime">
-      <HintPath>/Users/vivian/Documents/GitHub/gameJam2019/bcGameJam2019/Assets/TextMesh Pro/Plugins/Editor DLL/TextMeshPro-2017.3-Runtime.dll</HintPath>
+      <HintPath>/Users/argus/Documents/OneDrive - sfu.ca/Game Jam/gameJam2019/gameJam2019/bcGameJam2019/Assets/TextMesh Pro/Plugins/Editor DLL/TextMeshPro-2017.3-Runtime.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.Tracker">
-      <HintPath>/Users/vivian/Documents/GitHub/gameJam2019/bcGameJam2019/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll</HintPath>
+      <HintPath>/Users/argus/Documents/OneDrive - sfu.ca/Game Jam/gameJam2019/gameJam2019/bcGameJam2019/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.Editor">
-      <HintPath>/Users/vivian/Documents/GitHub/gameJam2019/bcGameJam2019/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Editor.dll</HintPath>
+      <HintPath>/Users/argus/Documents/OneDrive - sfu.ca/Game Jam/gameJam2019/gameJam2019/bcGameJam2019/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.StandardEvents">
-      <HintPath>/Users/vivian/Documents/GitHub/gameJam2019/bcGameJam2019/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.StandardEvents.dll</HintPath>
+      <HintPath>/Users/argus/Documents/OneDrive - sfu.ca/Game Jam/gameJam2019/gameJam2019/bcGameJam2019/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>/Applications/Unity/Unity.app/Contents/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
