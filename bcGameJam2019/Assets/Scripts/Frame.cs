@@ -10,6 +10,7 @@ public class Frame : MonoBehaviour
     public GameObject asteroid2;
     public GameObject powerupTargets;
 
+    private Rigidbody2D frameRB;
     private Rigidbody2D[] powerups;
     private System.Random rand;
 
@@ -58,11 +59,16 @@ public class Frame : MonoBehaviour
         }
 
     }
+    
+    public void setVelocity(Vector2 v) {
+        frameRB.velocity = v;
+    }
 
     void Awake() {
         Debug.Log("Calling Frame.Awake");
         rand = new System.Random();
         powerups = powerupTargets.gameObject.GetComponentsInChildren<Rigidbody2D>();
+        frameRB = gameObject.AddComponent<Rigidbody2D>();
     }
 
 }

@@ -24,5 +24,12 @@ public class God : MonoBehaviour
         }
     }
     
-    //TODO: when ready, call launchNextFrame
+    void Update() {
+        for(int i = 0; i < worlds.Length; i++) {
+            if (!worlds[i].ReadyToDraw()) {
+                return;
+            }
+        }   
+        launchNextFrame();
+    }
 }

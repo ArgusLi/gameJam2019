@@ -10,7 +10,7 @@ public class World : MonoBehaviour
     public int N;
     public char direction;
     
-    private bool started;
+    //private bool started;
     private List<int[,]> boards;
     private Frame[] frames;
     private int posX;
@@ -39,6 +39,12 @@ public class World : MonoBehaviour
         }
         return ret;
     }
+    
+    public bool ReadyToDraw() {
+        //TODO: implement
+        return true;
+    }
+    
     public void drawFrame(int[,] board){
         Debug.Log("Calling World.drawFrame");
         int[,] frame = new int[speed * N, N];
@@ -53,7 +59,10 @@ public class World : MonoBehaviour
             }
         }
         frames[nextFrame].drawBoard(frame, wormhole, cam.rect.width, N);
+        frames[nextFrame].setVelocity(new Vector2(0, 2));
+        
         nextFrame = (nextFrame + 1) % 3;
+        
         //TODO: implement
     }
 
@@ -71,7 +80,7 @@ public class World : MonoBehaviour
         nextFrame = 0;
         frames = gameObject.GetComponentsInChildren<Frame>();
         cameraRB = cam.GetComponent<Rigidbody2D>();
-        started = false;
+        //started = false;
     }
 
     public void enterWormhole(){
