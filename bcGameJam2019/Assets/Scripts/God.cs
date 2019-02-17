@@ -7,6 +7,7 @@ public class God : MonoBehaviour
     public int N = 9; // NxN matrices
 
     private World[] worlds;
+    private float runningScoreTotal;
 
     void launchNextFrame() {
         Debug.Log("Calling God.launchNextFrame");
@@ -24,5 +25,12 @@ public class God : MonoBehaviour
         }
     }
     
-    //TODO: when ready, call launchNextFrame
+    void Update() {
+        for(int i = 0; i < worlds.Length; i++) {
+            if (!worlds[i].ReadyToDraw()) {
+                return;
+            }
+        }   
+        launchNextFrame();
+    }
 }

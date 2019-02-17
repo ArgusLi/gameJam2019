@@ -156,8 +156,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 795f66faa2b354aa2ad1a815b66c880c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
 --- !u!64 &57723265
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -258,8 +258,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 523f135f80b63409ab13a20e482ec12d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   asteroid1: {fileID: 711643592}
   asteroid2: {fileID: 2077419381}
   powerupTargets: {fileID: 1769049774}
@@ -304,8 +304,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 523f135f80b63409ab13a20e482ec12d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   asteroid1: {fileID: 711643592}
   asteroid2: {fileID: 2077419381}
   powerupTargets: {fileID: 1769049774}
@@ -355,18 +355,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 851740bf22d70474a8119c59e5d3ba01, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  N: 0
-  started: 0
-  frames: []
+  m_Name:
+  m_EditorClassIdentifier:
   cam: {fileID: 1783466675}
+  N: 0
   direction: 0
-  posX: 0
-  posY: 0
-  speed: 0
-  wormhole: 0
-  nextFrame: 0
 --- !u!1 &218994950
 GameObject:
   m_ObjectHideFlags: 0
@@ -411,8 +404,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 795f66faa2b354aa2ad1a815b66c880c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
 --- !u!64 &218994953
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -572,12 +565,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7fd7f3e9a8eeb440185e3adc3c6312aa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   cam: {fileID: 519420031}
   shipMoveSpeed: 3
   shipScrollSpeed: 0
   world: {fileID: 987235164}
+  god: {fileID: 1987239061}
   deltaTime: 0
 --- !u!50 &229357067
 Rigidbody2D:
@@ -677,7 +671,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
-  m_WarningMessage: 
+  m_WarningMessage:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
@@ -722,8 +716,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 523f135f80b63409ab13a20e482ec12d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   asteroid1: {fileID: 711643592}
   asteroid2: {fileID: 2077419381}
   powerupTargets: {fileID: 1769049774}
@@ -763,7 +757,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
-  m_WarningMessage: 
+  m_WarningMessage:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
@@ -846,12 +840,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7fd7f3e9a8eeb440185e3adc3c6312aa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   cam: {fileID: 1651150274}
   shipMoveSpeed: 3
   shipScrollSpeed: 0
   world: {fileID: 724704309}
+  god: {fileID: 1987239061}
   deltaTime: 0
 --- !u!50 &341246259
 Rigidbody2D:
@@ -972,7 +967,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
-  m_WarningMessage: 
+  m_WarningMessage:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
@@ -1055,12 +1050,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7fd7f3e9a8eeb440185e3adc3c6312aa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   cam: {fileID: 1783466675}
   shipMoveSpeed: 3
   shipScrollSpeed: 0
   world: {fileID: 86084038}
+  god: {fileID: 1987239061}
   deltaTime: 0
 --- !u!50 &423979377
 Rigidbody2D:
@@ -1284,8 +1280,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 92e764477292d4fbfb0e1272cab94f6d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   shipScrollSpeed: 0
 --- !u!20 &519420031
 Camera:
@@ -1409,8 +1405,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 795f66faa2b354aa2ad1a815b66c880c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
 --- !u!64 &591204085
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1514,8 +1510,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 795f66faa2b354aa2ad1a815b66c880c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
 --- !u!64 &645376438
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1616,8 +1612,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 523f135f80b63409ab13a20e482ec12d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   asteroid1: {fileID: 711643592}
   asteroid2: {fileID: 2077419381}
   powerupTargets: {fileID: 1769049774}
@@ -1763,8 +1759,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 523f135f80b63409ab13a20e482ec12d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   asteroid1: {fileID: 711643592}
   asteroid2: {fileID: 2077419381}
   powerupTargets: {fileID: 1769049774}
@@ -1814,18 +1810,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 851740bf22d70474a8119c59e5d3ba01, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  N: 0
-  started: 0
-  frames: []
+  m_Name:
+  m_EditorClassIdentifier:
   cam: {fileID: 1651150274}
+  N: 0
   direction: 0
-  posX: 0
-  posY: 0
-  speed: 0
-  wormhole: 0
-  nextFrame: 0
 --- !u!1 &883284186
 GameObject:
   m_ObjectHideFlags: 0
@@ -1867,8 +1856,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 523f135f80b63409ab13a20e482ec12d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   asteroid1: {fileID: 711643592}
   asteroid2: {fileID: 2077419381}
   powerupTargets: {fileID: 1769049774}
@@ -2019,18 +2008,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 851740bf22d70474a8119c59e5d3ba01, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  N: 0
-  started: 0
-  frames: []
+  m_Name:
+  m_EditorClassIdentifier:
   cam: {fileID: 519420031}
+  N: 0
   direction: 0
-  posX: 0
-  posY: 0
-  speed: 0
-  wormhole: 0
-  nextFrame: 0
 --- !u!1 &1175690086
 GameObject:
   m_ObjectHideFlags: 0
@@ -2103,8 +2085,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 92e764477292d4fbfb0e1272cab94f6d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   shipScrollSpeed: 0
 --- !u!50 &1175690089
 Rigidbody2D:
@@ -2191,8 +2173,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 523f135f80b63409ab13a20e482ec12d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   asteroid1: {fileID: 711643592}
   asteroid2: {fileID: 2077419381}
   powerupTargets: {fileID: 1769049774}
@@ -2269,8 +2251,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 523f135f80b63409ab13a20e482ec12d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   asteroid1: {fileID: 711643592}
   asteroid2: {fileID: 2077419381}
   powerupTargets: {fileID: 1769049774}
@@ -2416,8 +2398,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 523f135f80b63409ab13a20e482ec12d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   asteroid1: {fileID: 711643592}
   asteroid2: {fileID: 2077419381}
   powerupTargets: {fileID: 1769049774}
@@ -2493,8 +2475,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 92e764477292d4fbfb0e1272cab94f6d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   shipScrollSpeed: 0
 --- !u!50 &1651150276
 Rigidbody2D:
@@ -2576,7 +2558,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
-  m_WarningMessage: 
+  m_WarningMessage:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
@@ -2659,12 +2641,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7fd7f3e9a8eeb440185e3adc3c6312aa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   cam: {fileID: 1175690087}
   shipMoveSpeed: 3
   shipScrollSpeed: 0
   world: {fileID: 1855224526}
+  god: {fileID: 1987239061}
   deltaTime: 0
 --- !u!50 &1666694148
 Rigidbody2D:
@@ -2790,8 +2773,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 523f135f80b63409ab13a20e482ec12d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   asteroid1: {fileID: 711643592}
   asteroid2: {fileID: 2077419381}
   powerupTargets: {fileID: 1769049774}
@@ -3002,8 +2985,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 92e764477292d4fbfb0e1272cab94f6d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   shipScrollSpeed: 0
 --- !u!50 &1783466677
 Rigidbody2D:
@@ -3095,18 +3078,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 851740bf22d70474a8119c59e5d3ba01, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  N: 0
-  started: 0
-  frames: []
+  m_Name:
+  m_EditorClassIdentifier:
   cam: {fileID: 1175690087}
+  N: 0
   direction: 0
-  posX: 0
-  posY: 0
-  speed: 0
-  wormhole: 0
-  nextFrame: 0
 --- !u!1 &1987239060
 GameObject:
   m_ObjectHideFlags: 0
@@ -3134,8 +3110,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e9ac8df34a7054511aea24f8b9076013, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   N: 9
 --- !u!4 &1987239062
 Transform:
@@ -3196,8 +3172,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 523f135f80b63409ab13a20e482ec12d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   asteroid1: {fileID: 711643592}
   asteroid2: {fileID: 2077419381}
   powerupTargets: {fileID: 1769049774}
@@ -3242,8 +3218,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 523f135f80b63409ab13a20e482ec12d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   asteroid1: {fileID: 711643592}
   asteroid2: {fileID: 2077419381}
   powerupTargets: {fileID: 1769049774}

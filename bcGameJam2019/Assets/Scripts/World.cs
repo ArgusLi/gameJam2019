@@ -10,7 +10,6 @@ public class World : MonoBehaviour
     public int N;
     public char direction;
     
-    private bool started;
     private List<int[,]> boards;
     private Frame[] frames;
     private int posX;
@@ -33,14 +32,23 @@ public class World : MonoBehaviour
                 }else{
                     ret += "! ";
                 }
-                // ret += board[j, i] + " ";
             }
             ret += "\n";
         }
         return ret;
     }
+    
+    public bool ReadyToDraw() {
+        Frame lastFrame = frames[(nextFrame + 2) % 3];
+        if (lastFrame.getPosition().y < posY-10) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+    
     public void drawFrame(int[,] board){
-        Debug.Log("Calling World.drawFrame");
+        //Debug.Log("Calling World.drawFrame");
         int[,] frame = new int[speed * N, N];
         for (int i = 0; i < N; i++)
         {
@@ -53,8 +61,10 @@ public class World : MonoBehaviour
             }
         }
         frames[nextFrame].drawBoard(frame, wormhole, cam.rect.width, N);
+        frames[nextFrame].setPosition(new Vector2(posX, posY+10)); //TODO: change
+        frames[nextFrame].setVelocity(new Vector2(0, 2));
+        
         nextFrame = (nextFrame + 1) % 3;
-        //TODO: implement
     }
 
     public void Awake()
@@ -71,7 +81,6 @@ public class World : MonoBehaviour
         nextFrame = 0;
         frames = gameObject.GetComponentsInChildren<Frame>();
         cameraRB = cam.GetComponent<Rigidbody2D>();
-        started = false;
     }
 
     public void enterWormhole(){
