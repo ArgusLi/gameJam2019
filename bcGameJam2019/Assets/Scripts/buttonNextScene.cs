@@ -9,6 +9,10 @@ public class buttonNextScene : MonoBehaviour
     {
         UnityEngine.SceneManagement.SceneManager.LoadScene("MainLevel");
     }
+    public void titleScreen()
+    {
+        UnityEngine.SceneManagement.SceneManager.LoadScene("titleScene");
+    }
 
 
 }
