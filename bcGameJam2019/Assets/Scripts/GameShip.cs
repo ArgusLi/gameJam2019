@@ -58,11 +58,6 @@ public class GameShip : MonoBehaviour
         }
 
         shipRB.MovePosition(newpos);
-        
-        // if (newpos.y > 100) {
-        //     shipRB.MovePosition(new Vector2(shipRB.position.x, 0));
-        //     cameraRB.MovePosition(new Vector2(cameraRB.position.x, 0));
-        // }
     }
 
     void crash(){
