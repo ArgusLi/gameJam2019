@@ -9,6 +9,7 @@ public class Constants : MonoBehaviour
     private static float CamHeight;
     private static float Unit;
     private static bool EnergyMode;
+    private static float Dimensions;
 	public Constants()
 	{
 	}
@@ -43,5 +44,13 @@ public class Constants : MonoBehaviour
     public static bool getEnergy()
     {
         return EnergyMode;
+    }
+    public static void setDimensions(float dimensions)
+    {
+        Dimensions = dimensions;
+    }
+    public static float getDimensions()
+    {
+        return Dimensions;
     }
 }
