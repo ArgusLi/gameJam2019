@@ -9,6 +9,7 @@ public class Frame : MonoBehaviour
     public GameObject asteroid1;
     public GameObject asteroid2;
     public GameObject powerupTargets;
+    public GameObject batteryTarget;
 
     private Rigidbody2D frameRB;
     private Rigidbody2D[] powerupBodies;
@@ -35,7 +36,7 @@ public class Frame : MonoBehaviour
         GameObject powerup;
         if (!Constants.getEnergy())
         {
-            int i = rand.Next() % powerups.Length;
+            int i = rand.Next() % powerupBodies.Length;
 
             powerup = GameObject.Instantiate(powerups[i].gameObject, new Vector3(x, y, 0), Quaternion.identity, transform);
         }
