@@ -65,7 +65,6 @@
     <Compile Include="Assets\Scripts\EndCamera.cs" />
     <Compile Include="Assets\Scripts\endScore.cs" />
     <Compile Include="Assets\Scripts\GameCamera.cs" />
-    <Compile Include="Assets\Scripts\GameObstacle.cs" />
     <Compile Include="Assets\Scripts\GamePowerup.cs" />
     <Compile Include="Assets\Scripts\GameShip.cs" />
     <Compile Include="Assets\Scripts\ObstacleManager.cs" />
