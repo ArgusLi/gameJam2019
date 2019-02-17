@@ -5,11 +5,11 @@ using UnityEngine;
 
 public class Constants : MonoBehaviour
 {
-    private static int N;
-    private static float CamHeight;
-    private static float Unit;
-    private static bool EnergyMode;
-    private static float Dimensions;
+    private static int N = 0;
+    private static float CamHeight = 0.0f;
+    private static float Unit = 0.0f;
+    private static bool EnergyMode = false;
+    private static float Dimensions = 0.0f;
 	public Constants()
 	{
 	}

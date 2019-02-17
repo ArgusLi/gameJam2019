@@ -9,6 +9,7 @@ public class God : MonoBehaviour
     private World[] worlds;
     private float runningScoreTotal;
     private int energy;
+    private GameShip crashed;
 
     void launchNextFrame()
     {
@@ -28,6 +29,7 @@ public class God : MonoBehaviour
         {
             worlds[i].transform.localPosition = new Vector3(100 * i+100, 0, 0);
         }
+        crashed = null;
     }
 
     //TODO: when ready, call launchNextFrame
@@ -37,6 +39,7 @@ public class God : MonoBehaviour
         runningScoreTotal += score;
         energy = 0;
         Constants.setEnergy(true);
+        crashed = ship;
     }
 
     IEnumerator LoadAfterDelay()
@@ -60,6 +63,22 @@ public class God : MonoBehaviour
             }
         }
         launchNextFrame();
+    }
+
+    void CollectEnergy()
+    {
+        energy++;
+        if(energy >= 3)
+        {
+            Revive();
+        }
+    }
+
+    void Revive()
+    {
+        Constants.setEnergy(false);
+        //wait for frame change
+        crashed.respawn();
     }
 
 

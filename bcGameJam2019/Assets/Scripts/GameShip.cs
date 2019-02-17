@@ -61,17 +61,21 @@ public class GameShip : MonoBehaviour
     }
 
     void crash(){
-        Constants.setEnergy(true);
-        endTime = Time.unscaledTime;
-        animator.SetBool("isTriggered", true);
-        deltaTime = endTime - startTime;
+        if(Constants.getEnergy() == true)
+        {
+            endTime = Time.unscaledTime;
+            animator.SetBool("isTriggered", true);
+            deltaTime = endTime - startTime;
+        }
         god.crash(deltaTime, this);
+        Constants.setEnergy(true);
         this.transform.position = new Vector3(999, 999, 0);
         //StartCoroutine(LoadAfterDelay());
     }
 
     public void respawn(){
         startTime = Time.unscaledTime;
+        this.transform.position = new Vector3(0, 0, 0);
     }
 
     void OnTriggerEnter2D(Collider2D col)
