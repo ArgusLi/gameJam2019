@@ -217,13 +217,14 @@ public class World : MonoBehaviour
         }
     }
 
-    public void Boost(){
+    public void Boost()
+    {
         enterWormhole();
-        if(speed <=2){
+        if (speed <= 2)
+        {
             speed *= 2;
         }
     }
-
 }
 
 

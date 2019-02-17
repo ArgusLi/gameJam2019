@@ -8,6 +8,7 @@ public class God : MonoBehaviour
 
     private World[] worlds;
     private float runningScoreTotal;
+    private int energy;
 
     void launchNextFrame()
     {
@@ -34,6 +35,7 @@ public class God : MonoBehaviour
     public void crash(float score, GameShip ship)
     {
         runningScoreTotal += score;
+        energy = 0;
         Constants.setEnergy(true);
     }
 
@@ -49,14 +51,16 @@ public class God : MonoBehaviour
     }
     
     void Update()
+    {
+        for (int i = 0; i < worlds.Length; i++)
         {
-            for (int i = 0; i < worlds.Length; i++)
+            if (!worlds[i].ReadyToDraw())
             {
-                if (!worlds[i].ReadyToDraw())
-                {
-                    return;
-                }
+                return;
             }
-            launchNextFrame();
         }
+        launchNextFrame();
+    }
+
+
 }
