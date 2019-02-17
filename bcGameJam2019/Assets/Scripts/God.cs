@@ -21,8 +21,6 @@ public class God : MonoBehaviour
         for(int i = 0; i < worlds.Length; i++){
             worlds[i].transform.localPosition = new Vector3(100*i, 0, 0);
         }
-
-        launchNextFrame();
     }
 
     // Update is called once per frame
