@@ -54,28 +54,33 @@ public class GameShip : MonoBehaviour
         Vector2 newpos = shipRB.position + shipVelocity * Time.fixedDeltaTime;
         if ((newpos.y >= topBound)||(newpos.y <= bottomBound)||(newpos.x > rightBound)||(newpos.x < leftBound))
         {
-            crash();
+            //crash();
         }
 
         shipRB.MovePosition(newpos);
     }
 
     void crash(){
-        return;
-        endTime = Time.unscaledTime;
-        animator.SetBool("isTriggered", true);
-        deltaTime = endTime - startTime;
+        if(Constants.getEnergy() == true)
+        {
+            endTime = Time.unscaledTime;
+            animator.SetBool("isTriggered", true);
+            deltaTime = endTime - startTime;
+        }
         god.crash(deltaTime, this);
+        Constants.setEnergy(true);
         this.transform.position = new Vector3(999, 999, 0);
         //StartCoroutine(LoadAfterDelay());
     }
 
     public void respawn(){
         startTime = Time.unscaledTime;
+        this.transform.position = new Vector3(0, 0, 0);
     }
 
     void OnTriggerEnter2D(Collider2D col)
     {
+        crash();
         if (col.CompareTag("obstacle"))
         {
             crash();
