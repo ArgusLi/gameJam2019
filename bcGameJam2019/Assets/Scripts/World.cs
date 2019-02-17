@@ -54,13 +54,13 @@ public class World : MonoBehaviour
         Vector2 lastPos = lastFrame.getPosition();
         float cameraY = cameraRB.position.y;
         if (lastPos.y == 0f) {
-            Debug.Log("Ready: never drawn");
+            //Debug.Log("Ready: never drawn");
             return true;
         } else if (lastPos.y < cameraY - 10) {
-            Debug.Log("Ready: offscreen ()");
+           // Debug.Log("Ready: offscreen ()");
             return true;
         } else {
-            Debug.Log("Not ready: onscreen: frame=" + lastPos.y.ToString() + ", camera=" + cameraY.ToString());
+            //Debug.Log("Not ready: onscreen: frame=" + lastPos.y.ToString() + ", camera=" + cameraY.ToString());
             return false;
         }
     }

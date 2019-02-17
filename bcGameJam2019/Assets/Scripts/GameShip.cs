@@ -54,7 +54,7 @@ public class GameShip : MonoBehaviour
         Vector2 newpos = shipRB.position + shipVelocity * Time.fixedDeltaTime;
         if ((newpos.y >= topBound)||(newpos.y <= bottomBound)||(newpos.x > rightBound)||(newpos.x < leftBound))
         {
-            crash();
+            //crash();
         }
 
         shipRB.MovePosition(newpos);
@@ -80,6 +80,7 @@ public class GameShip : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D col)
     {
+        crash();
         if (col.CompareTag("obstacle"))
         {
             crash();
