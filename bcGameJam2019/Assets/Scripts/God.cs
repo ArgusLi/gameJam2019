@@ -8,7 +8,6 @@ public class God : MonoBehaviour
 
     private World[] worlds;
     private float runningScoreTotal;
-    private bool energyMode = false;
 
     void launchNextFrame()
     {
@@ -26,7 +25,7 @@ public class God : MonoBehaviour
         worlds = gameObject.GetComponentsInChildren<World>();
         for (int i = 0; i < worlds.Length; i++)
         {
-            worlds[i].transform.localPosition = new Vector3(100 * i, 0, 0);
+            worlds[i].transform.localPosition = new Vector3(100 * i+100, 0, 0);
         }
     }
 
@@ -35,7 +34,7 @@ public class God : MonoBehaviour
     public void crash(float score, GameShip ship)
     {
         runningScoreTotal += score;
-        energyMode = true;
+        Constants.setEnergy(true);
     }
 
     IEnumerator LoadAfterDelay()
@@ -47,7 +46,9 @@ public class God : MonoBehaviour
     void OnDisable()
     {
         PlayerPrefs.SetFloat("score", runningScoreTotal);
-        void Update()
+    }
+    
+    void Update()
         {
             for (int i = 0; i < worlds.Length; i++)
             {
@@ -58,5 +59,4 @@ public class God : MonoBehaviour
             }
             launchNextFrame();
         }
-    }
 }
