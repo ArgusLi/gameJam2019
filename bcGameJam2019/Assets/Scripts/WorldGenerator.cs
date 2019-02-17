@@ -38,7 +38,7 @@ public class WorldGenerator{
             }
         }
 
-        static List<int[,]> generateWorld(World[] w, int n){
+        public static List<int[,]> generateWorld(World[] w, int n){
             int N = n;
             World[] worlds = w;
             for(int i = 0; i < worlds.Length; i++){

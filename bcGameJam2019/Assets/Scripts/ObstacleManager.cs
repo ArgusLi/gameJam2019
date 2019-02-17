@@ -9,14 +9,34 @@ public class ObstacleManager : MonoBehaviour
     public Sprite sprite2;
 
     private GameObject[] obstacles;
-    private Rigidbody2D[] bodies;
+    static private Rigidbody2D[] bodies;
     private PolygonCollider2D[] colliders;
+
+    static List<int> waitingList;
+
+    private static Vector2 stop = new Vector2(0, 0);
+    private static Vector2 up = new Vector2(0, 5);
+    private static Vector2 down = new Vector2(0, -5);
+    private static Vector2 left = new Vector2(5, 0);
+    private static Vector2 right = new Vector2(-5, 0);
+
+    public static void PlaceObstacle(float x, float y){
+        if(waitingList.Count == 0){
+            return;
+        }
+        Rigidbody2D body = bodies[waitingList[0]];
+        body.velocity = down;
+        body.MovePosition(new Vector2(x, y));
+    }
 
     void ResetPosition(int i) {
         bodies[i].MovePosition(new Vector2(-1000, -1000));
+        bodies[i].velocity = stop;
+        waitingList.Add(i);
     }
 
     void Start() {
+        waitingList = new List<int>();
         obstacles = new GameObject[numObstacles];
         bodies = new Rigidbody2D[numObstacles];
         colliders = new PolygonCollider2D[numObstacles];
