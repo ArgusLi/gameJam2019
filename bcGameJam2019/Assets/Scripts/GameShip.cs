@@ -71,6 +71,7 @@ public class GameShip : MonoBehaviour
         animator.SetBool("isTriggered", true);
         deltaTime = endTime - startTime;
         god.crash(deltaTime, this);
+        this.transform.position = new Vector3(999, 999, 0);
         //StartCoroutine(LoadAfterDelay());
     }
 

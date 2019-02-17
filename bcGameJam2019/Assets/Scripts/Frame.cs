@@ -33,8 +33,18 @@ public class Frame : MonoBehaviour
 
     private void drawPowerup(float x, float y) {
         GameObject powerup;
-        int i = rand.Next()%powerupBodies.Length;
-        powerup = GameObject.Instantiate(powerupBodies[i].gameObject, new Vector3(-1000, -1000, 0), Quaternion.identity, transform);
+        if (!Constants.getEnergy())
+        {
+            int i = rand.Next() % powerups.Length;
+
+            powerup = GameObject.Instantiate(powerups[i].gameObject, new Vector3(x, y, 0), Quaternion.identity, transform);
+        }
+        else
+        {
+            //powerup = GameObject.Instantiate()
+        }
+        
+        
         powerup.transform.localPosition = new Vector3(x, y, 0);
         powerup.transform.localScale = scale;
         powerups.Add(powerup);

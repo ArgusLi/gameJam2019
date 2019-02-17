@@ -187,7 +187,7 @@ public class World : MonoBehaviour
             }
         }
         cam.pixelRect = new Rect(x, y, width, height);
-
+        Constants.setDimensions(width);
     }
 
     public void GetSynced(char direction, int speed){
