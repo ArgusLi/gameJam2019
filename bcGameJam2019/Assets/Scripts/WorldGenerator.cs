@@ -220,8 +220,8 @@ public class WorldGenerator{
             return getWorldFrames(worlds);
         }
 
-        private List<int[,]> getWorldFrames(World[] w){
-            List<int[,]> frames = new List<int[,]>
+        private static List<int[,]> getWorldFrames(World[] w){
+            List<int[,]> frames = new List<int[,]>();
             for(int i = 0; i < w.Length; i++){
                 if(w[i].direction == 'L'){
                     frames.Add(rotate(w[i].board, 1, w[i].N));
@@ -233,20 +233,22 @@ public class WorldGenerator{
                     frames.Add(w[i].board);
                 }
             }
+            return frames;
         }
 
-        private int[,] rotate(int[,] A, int num, int n){
+        private static int[,] rotate(int[,] A, int num, int n){
             for(int i = 0; i < num; i++){
                 for(int j = 0; j < n/2; j++){
                     for(int k = 0; k < n - j - 1; k++){
                         int temp = A[j, k];
                         A[j, k] = A[n - 1 - k, j];
-                        A[n - 1 - k, j] = a[n - 1 - j, n - 1 - k];
-                        A[n - 1 - j, n - 1 - k] = a[k][n - 1 - j];
-                        a[k][n - 1 - j] = temp;
+                        A[n - 1 - k, j] = A[n - 1 - j, n - 1 - k];
+                        A[n - 1 - j, n - 1 - k] = A[k, n - 1 - j];
+                        A[k, n - 1 - j] = temp;
                     }
                 }
             }
+            return A;
         }
 
         static void fill(World world){
