@@ -17,14 +17,15 @@ public class ObstacleManager : MonoBehaviour
     private static Vector2 stop = new Vector2(0, 0);
     private static Vector2 up = new Vector2(0, 5);
     private static Vector2 down = new Vector2(0, -5);
-    private static Vector2 left = new Vector2(5, 0);
-    private static Vector2 right = new Vector2(-5, 0);
+    private static Vector2 left = new Vector2(-5, 0);
+    private static Vector2 right = new Vector2(5, 0);
 
     public static void PlaceObstacle(float x, float y){
         if(waitingList.Count == 0){
             return;
         }
         Rigidbody2D body = bodies[waitingList[0]];
+        waitingList.RemoveAt(0);
         body.velocity = down;
         body.MovePosition(new Vector2(x, y));
     }
@@ -61,4 +62,6 @@ public class ObstacleManager : MonoBehaviour
             ResetPosition(i);
         }   
     }
+
+    
 }

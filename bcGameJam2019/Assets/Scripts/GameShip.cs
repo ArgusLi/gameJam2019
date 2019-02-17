@@ -98,13 +98,13 @@ public class GameShip : MonoBehaviour
         }
         else if(col.name == "spin")
         {*/
-        int direction = -1;//powerUps.spin();  //  if direction is clockwise then -1, if anticlockwise then 1
-        xaxis = Input.GetAxisRaw("Vertical") * shipMoveSpeed * direction;
-        yaxis = Input.GetAxisRaw("Horizontal") * shipMoveSpeed + shipScrollSpeed * direction;
-        Vector3 rotateValue = new Vector3(0, -90, 0);
-        shipRB.transform.eulerAngles = transform.eulerAngles - rotateValue;
-        // cameraRB.transform.eulerAngles = transform.eulerAngles - rotateValue; 
-        cameraRB.rotation += 90f;
+        // int direction = -1;//powerUps.spin();  //  if direction is clockwise then -1, if anticlockwise then 1
+        // xaxis = Input.GetAxisRaw("Vertical") * shipMoveSpeed * direction;
+        // yaxis = Input.GetAxisRaw("Horizontal") * shipMoveSpeed + shipScrollSpeed * direction;
+        // Vector3 rotateValue = new Vector3(0, -90, 0);
+        // shipRB.transform.eulerAngles = transform.eulerAngles - rotateValue;
+        // // cameraRB.transform.eulerAngles = transform.eulerAngles - rotateValue; 
+        // cameraRB.rotation += 90f;
         //}
         /*else if (col.name == "swap")
         {
