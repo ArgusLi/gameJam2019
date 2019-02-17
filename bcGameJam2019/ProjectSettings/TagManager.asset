@@ -8,6 +8,9 @@ TagManager:
   - slow
   - spin
   - sync
+  - sync4
+  - battery
+  - obstacle
   layers:
   - Default
   - TransparentFX

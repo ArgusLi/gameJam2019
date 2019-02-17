@@ -60,6 +60,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\boost.cs" />
     <Compile Include="Assets\Scripts\Constants.cs" />
     <Compile Include="Assets\Scripts\Deprecated\FrameJob.cs" />
     <Compile Include="Assets\Scripts\Deprecated\ObstacleManager.cs" />
