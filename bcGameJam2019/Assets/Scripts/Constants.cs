@@ -8,6 +8,7 @@ public class Constants : MonoBehaviour
     private static int N;
     private static float CamHeight;
     private static float Unit;
+    private static bool EnergyMode;
 	public Constants()
 	{
 	}
@@ -34,5 +35,13 @@ public class Constants : MonoBehaviour
     public static float getUnit()
     {
         return Unit;
+    }
+    public static void setEnergy(bool energyMode)
+    {
+        EnergyMode = energyMode;
+    }
+    public static bool getEnergy()
+    {
+        return EnergyMode;
     }
 }

@@ -8,7 +8,6 @@ public class God : MonoBehaviour
 
     private World[] worlds;
     private float runningScoreTotal;
-    private bool energyMode = false;
 
     void launchNextFrame()
     {
@@ -35,7 +34,7 @@ public class God : MonoBehaviour
     public void crash(float score, GameShip ship)
     {
         runningScoreTotal += score;
-        energyMode = true;
+        Constants.setEnergy(true);
     }
 
     IEnumerator LoadAfterDelay()
