@@ -8,6 +8,7 @@ public class God : MonoBehaviour
 
     private World[] worlds;
     private float runningScoreTotal;
+    private bool energyMode = false;
 
     void launchNextFrame() {
         Debug.Log("Calling God.launchNextFrame");
@@ -25,6 +26,21 @@ public class God : MonoBehaviour
         }
     }
     
+    //TODO: when ready, call launchNextFrame
+
+    public crash(float score, GameShip ship){
+        runningScoreTotal += score;
+        energyMode = true;
+    }
+
+    IEnumerator LoadAfterDelay() {
+        yield return new WaitForSecondsRealtime(1);
+        UnityEngine.SceneManagement.SceneManager.LoadScene("End");
+    }
+
+    void OnDisable()
+    {
+        PlayerPrefs.SetFloat("score", runningScoreTotal);
     void Update() {
         for(int i = 0; i < worlds.Length; i++) {
             if (!worlds[i].ReadyToDraw()) {
