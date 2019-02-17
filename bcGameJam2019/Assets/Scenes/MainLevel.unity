@@ -360,6 +360,7 @@ MonoBehaviour:
   cam: {fileID: 1783466675}
   N: 0
   direction: 0
+  quadPos: 2
 --- !u!1 &218994950
 GameObject:
   m_ObjectHideFlags: 0
@@ -1135,7 +1136,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 423979373}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 26.094587, y: -1.1757698, z: -0.2599971}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_Children: []
   m_Father: {fileID: 86084037}
@@ -1301,10 +1302,10 @@ Camera:
   m_FocalLength: 50
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0.25
-    y: 0.5
-    width: 0.25
-    height: 1
+    x: 0
+    y: 0
+    width: 0.5
+    height: 0.5
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
@@ -1815,6 +1816,7 @@ MonoBehaviour:
   cam: {fileID: 1651150274}
   N: 0
   direction: 0
+  quadPos: 3
 --- !u!1 &883284186
 GameObject:
   m_ObjectHideFlags: 0
@@ -2013,6 +2015,7 @@ MonoBehaviour:
   cam: {fileID: 519420031}
   N: 0
   direction: 0
+  quadPos: 1
 --- !u!1 &1175690086
 GameObject:
   m_ObjectHideFlags: 0
@@ -2051,9 +2054,9 @@ Camera:
   m_FocalLength: 50
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0.25
+    x: 0.5
     y: 0
-    width: 0.25
+    width: 0.5
     height: 0.5
   near clip plane: 0.3
   far clip plane: 1000
@@ -2441,10 +2444,10 @@ Camera:
   m_FocalLength: 50
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0.25
+    x: 0
     y: 0.5
-    width: 0.25
-    height: 1
+    width: 0.5
+    height: 0.5
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
@@ -2951,9 +2954,9 @@ Camera:
   m_FocalLength: 50
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0.25
-    y: 0
-    width: 0.25
+    x: 0.5
+    y: 0.5
+    width: 0.5
     height: 0.5
   near clip plane: 0.3
   far clip plane: 1000
@@ -3083,6 +3086,7 @@ MonoBehaviour:
   cam: {fileID: 1175690087}
   N: 0
   direction: 0
+  quadPos: 0
 --- !u!1 &1987239060
 GameObject:
   m_ObjectHideFlags: 0
