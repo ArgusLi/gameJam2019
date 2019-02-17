@@ -42,8 +42,8 @@ public class Frame : MonoBehaviour
 
     public void drawBoard(int[,] board, bool wormhole, float camWidth, int N){
         //Debug.Log("Calling Frame.drawBoard");
-        asteroids.Clear();
-        powerups.Clear();
+        asteroids = new List<GameObject>();
+        powerups = new List<GameObject>();
         float unit = 40 * camWidth/(float)N;
         for(int r = N-1; r >= 0; r--){
             for(int c = 0; c < N; c++){

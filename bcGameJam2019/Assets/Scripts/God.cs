@@ -26,7 +26,7 @@ public class God : MonoBehaviour
         worlds = gameObject.GetComponentsInChildren<World>();
         for (int i = 0; i < worlds.Length; i++)
         {
-            worlds[i].transform.localPosition = new Vector3(100 * i, 0, 0);
+            worlds[i].transform.localPosition = new Vector3(100 * i+100, 0, 0);
         }
     }
 
@@ -47,7 +47,9 @@ public class God : MonoBehaviour
     void OnDisable()
     {
         PlayerPrefs.SetFloat("score", runningScoreTotal);
-        void Update()
+    }
+    
+    void Update()
         {
             for (int i = 0; i < worlds.Length; i++)
             {
@@ -58,5 +60,4 @@ public class God : MonoBehaviour
             }
             launchNextFrame();
         }
-    }
 }

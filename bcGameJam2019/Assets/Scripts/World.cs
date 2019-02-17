@@ -78,9 +78,9 @@ public class World : MonoBehaviour
                 }
             }
         }
-        frames[nextFrame].setPosition(new Vector2(posX, posY+10));
+        frames[nextFrame].setPosition(new Vector2(cameraRB.position.x, cameraRB.position.y+10));
         frames[nextFrame].drawBoard(frame, wormhole, cam.rect.width, N);
-        frames[nextFrame].setVelocity(new Vector2(0, -2));
+        frames[nextFrame].setVelocity(new Vector2(0, -4)); //CHANGE
         
         nextFrame = (nextFrame + 1) % 3;
     }
