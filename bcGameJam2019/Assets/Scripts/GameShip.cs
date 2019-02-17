@@ -10,6 +10,7 @@ public class GameShip : MonoBehaviour
     public float shipMoveSpeed;
     public float shipScrollSpeed;
     public World world;
+    public God god;
 
     //private PowerUps powerUps;
     private Rigidbody2D shipRB;
@@ -51,53 +52,35 @@ public class GameShip : MonoBehaviour
 
 
         Vector2 newpos = shipRB.position + shipVelocity * Time.fixedDeltaTime;
-        if (newpos.y >= topBound)
+        if ((newpos.y >= topBound)||(newpos.y <= bottomBound)||(newpos.x > rightBound)||(newpos.x < leftBound))
         {
-            endTime = Time.unscaledTime;
-            animator.SetBool("isTriggered", true);
-            deltaTime = endTime - startTime;
-            StartCoroutine(LoadAfterDelay());
-        }
-        else if(newpos.y <= bottomBound)
-        {
-            endTime = Time.unscaledTime;
-            animator.SetBool("isTriggered", true);
-            deltaTime = endTime - startTime;
-            StartCoroutine(LoadAfterDelay());
-        }
-        if (newpos.x > rightBound)
-        {
-            endTime = Time.unscaledTime;
-            animator.SetBool("isTriggered", true);
-            deltaTime = endTime - startTime;
-            StartCoroutine(LoadAfterDelay());
-        }
-        else if (newpos.x < leftBound)
-        {
-            endTime = Time.unscaledTime;
-            animator.SetBool("isTriggered", true);
-            deltaTime = endTime - startTime;
-            StartCoroutine(LoadAfterDelay());
+            crash();
         }
 
         shipRB.MovePosition(newpos);
         
-        if (newpos.y > 100) {
-            shipRB.MovePosition(new Vector2(shipRB.position.x, 0));
-            cameraRB.MovePosition(new Vector2(cameraRB.position.x, 0));
-        }
+        // if (newpos.y > 100) {
+        //     shipRB.MovePosition(new Vector2(shipRB.position.x, 0));
+        //     cameraRB.MovePosition(new Vector2(cameraRB.position.x, 0));
+        // }
     }
 
+    void crash(){
+        endTime = Time.unscaledTime;
+        animator.SetBool("isTriggered", true);
+        deltaTime = endTime - startTime;
+        StartCoroutine(LoadAfterDelay());
+    }
 
+    void respawn(){
+        startTime = Time.unscaledTime;
+    }
 
     void OnTriggerEnter2D(Collider2D col)
     {
         if (col.name.Equals("obstacle"))
         {
-            // endTime = Time.unscaledTime;
-            // animator.SetBool("isTriggered", true);
-            // deltaTime = endTime - startTime;
-            // StartCoroutine(LoadAfterDelay());
+            crash();
         }
         else if(col.name.Equals("spin"))
         {  

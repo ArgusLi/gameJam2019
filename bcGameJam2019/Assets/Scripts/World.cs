@@ -5,31 +5,20 @@ using UnityEngine;
 
 public class World : MonoBehaviour
 {
-    public int N;
-    public bool started;
-    public int[,] board;
-    public List<int[,]> boards;
-    public Frame[] frames;
     public Camera cam;
-    private Rigidbody2D cameraRB;
+    public int[,] board;
+    public int N;
     public char direction;
-    public int posX;
-    public int posY;
-    public int speed;
-    public bool wormhole;
-    public int nextFrame;
+    
+    private List<int[,]> boards;
+    private Frame[] frames;
+    private int posX;
+    private int posY;
+    private int speed;
+    private bool wormhole;
+    private int nextFrame;
+    private Rigidbody2D cameraRB;
 
-    //public World(int n){
-    //    N = n;
-    //    board = new int[N, N];
-    //    direction = 'U';
-    //    posX = N/2;
-    //    posY = N/2;
-    //    speed = 2;
-    //    wormhole = false;
-    //    nextFrame = 0;
-    //    frames = gameObject.GetComponentsInChildren<Frame>();
-    //}
     public override string ToString(){
         string ret = "";
         for(int i = 0; i < N; i++){
@@ -43,13 +32,23 @@ public class World : MonoBehaviour
                 }else{
                     ret += "! ";
                 }
-                // ret += board[j, i] + " ";
             }
             ret += "\n";
         }
         return ret;
     }
+    
+    public bool ReadyToDraw() {
+        Frame lastFrame = frames[(nextFrame + 2) % 3];
+        if (lastFrame.getPosition().y < posY-10) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+    
     public void drawFrame(int[,] board){
+        //Debug.Log("Calling World.drawFrame");
         int[,] frame = new int[speed * N, N];
         for (int i = 0; i < N; i++)
         {
@@ -62,13 +61,15 @@ public class World : MonoBehaviour
             }
         }
         frames[nextFrame].drawBoard(frame, wormhole, cam.rect.width, N);
-        //Move frames[nextFrame] to on top of the frames[(nextFrame - 1) % 3]
+        frames[nextFrame].setPosition(new Vector2(posX, posY+10)); //TODO: change
+        frames[nextFrame].setVelocity(new Vector2(0, 2));
+        
         nextFrame = (nextFrame + 1) % 3;
     }
 
-    public void Start()
+    public void Awake()
     {
-        Debug.Log("Hello");
+        Debug.Log("Calling World.Awake");
         cam.transform.localPosition = new Vector3(0,0,-0.5f);
         N = transform.parent.gameObject.GetComponent<God>().N;
         board = new int[N, N];
@@ -80,7 +81,6 @@ public class World : MonoBehaviour
         nextFrame = 0;
         frames = gameObject.GetComponentsInChildren<Frame>();
         cameraRB = cam.GetComponent<Rigidbody2D>();
-        started = false;
     }
 
     public void enterWormhole(){
