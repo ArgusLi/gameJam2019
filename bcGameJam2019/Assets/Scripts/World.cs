@@ -90,7 +90,13 @@ public class World : MonoBehaviour
 
     public void Sync(){
         enterWormhole();
-        //TODO:: call GetSynched on all other worlds
+        God[] gods = gameObject.GetComponentsInParent<God>();
+        World[] worlds = gods[0].gameObject.GetComponentsInChildren<World>();
+        foreach (World world in worlds){
+            if(world != this){
+                world.GetSynced(direction, speed);
+            }
+        }
     }
 
     public void GetSynced(char direction, int speed){
