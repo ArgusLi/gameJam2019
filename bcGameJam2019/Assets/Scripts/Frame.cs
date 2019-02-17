@@ -4,14 +4,15 @@ using UnityEngine;
 
 public class Frame : MonoBehaviour
 {
-    private int N = 9;
-    private World world;
-    public Camera camera;
 
-    
-    private float lastFrameY;
+    Rigidbody2D[] asteroids;
 
-    public void drawFrame(List<int[,]> frame){
+    private void drawAsteroid(float x, float y){
+        GameObject asteroid = gameObject.Instantiate(asteroids[0].gameObject, new Vector3(x, y, 0), Quaternion.identity, transform);
+
+    }
+
+    public void drawBoard(List<int[,]> board, bool wormhole){
         // float unit = cams[0].orthographicSize*2/(float)N;
         // for(int i = 0; i < numWorlds; i++){
         //     for(int r = N-1; r >= 0; r--){
@@ -33,25 +34,15 @@ public class Frame : MonoBehaviour
         //         }
         //     }
         // }
+
     }
 
     // Start is called before the first frame update
     void Start()
     {
-        Debug.Log("CALLED");
+        asteroids = gameObject.GetComponentsInChildren<Rigidbody2D>();
+        drawAsteroid(0f,0f);
 
-        
-        // drawFrames(WorldGenerator.generateWorld(worlds, N));
     }
 
-static bool x = true;
-
-    // Update is called once per frame
-    void Update()
-    {
-        if(x){
-            // drawFrames(WorldGenerator.generateWorld(world, N));
-            // x = false;
-        }
-    }
 }
