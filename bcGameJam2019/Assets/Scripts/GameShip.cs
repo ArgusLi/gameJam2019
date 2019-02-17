@@ -23,6 +23,8 @@ public class GameShip : MonoBehaviour
 
     void Start()
     {
+        transform.localPosition = new Vector3(0,0,0);
+
         startTime = Time.unscaledTime;
 
         shipRB = GetComponent<Rigidbody2D>();
