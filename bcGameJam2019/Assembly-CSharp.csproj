@@ -72,6 +72,7 @@
     <Compile Include="Assets\Scripts\GamePowerup.cs" />
     <Compile Include="Assets\Scripts\GameShip.cs" />
     <Compile Include="Assets\Scripts\God.cs" />
+    <Compile Include="Assets\Scripts\inputName.cs" />
     <Compile Include="Assets\Scripts\leaderboardScores.cs" />
     <Compile Include="Assets\Scripts\MainLevelBehaviour.cs" />
     <Compile Include="Assets\Scripts\Scrolling.cs" />
@@ -712,7 +713,7 @@
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
   </Target>
