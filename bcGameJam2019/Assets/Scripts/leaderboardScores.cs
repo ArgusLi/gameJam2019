@@ -23,12 +23,7 @@ public class leaderboardScores : MonoBehaviour
         player = PlayerPrefs.GetString("playername");
         int score = (int)deltaTime;
         localscore[10] = 0;
-        //test
-        player = "colegreer";
-        //score = 5;
 
-        //test end
-        //test end
         for (int i = 0; i<10; i++)
         {
 
