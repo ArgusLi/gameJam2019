@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 
 public class WorldGenerator{
-    public static List<int[,]> getWorldFrames(List<World> worlds){
+    public static List<int[,]> getWorldFrames(World[] worlds){
         List<int[,]> ret = new List<int[,]>();
         foreach(World world in worlds){
             ret.Add(new int[world.N, world.N]);
@@ -47,18 +47,13 @@ public class WorldGenerator{
             }
         }
 
-        static void Main(){
-            int N = 9;
-            World[] worlds = new World[4];
+        static List<int[,]> generateWorld(World[] w, int n){
+            int N = n;
+            World[] worlds = w;
             for(int i = 0; i < worlds.Length; i++){
                 worlds[i] = new World(N);
                 fill(worlds[i]);
             }
-            worlds[1].direction = 'L';
-            worlds[2].direction = 'R';
-            worlds[3].direction = 'D';
-
-
 
 
             List<char> path = new List<char>();
@@ -231,6 +226,7 @@ public class WorldGenerator{
                     }
 				}
             }
+            return getWorldFrames(worlds);
         }
 
         static void fill(World world){
