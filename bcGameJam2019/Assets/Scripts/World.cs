@@ -11,25 +11,15 @@ public class World : MonoBehaviour
     public List<int[,]> boards;
     public Frame[] frames;
     public Camera cam;
-    private Rigidbody2D cameraRB;
     public char direction;
     public int posX;
     public int posY;
     public int speed;
     public bool wormhole;
     public int nextFrame;
+    
+    private Rigidbody2D cameraRB;
 
-    //public World(int n){
-    //    N = n;
-    //    board = new int[N, N];
-    //    direction = 'U';
-    //    posX = N/2;
-    //    posY = N/2;
-    //    speed = 2;
-    //    wormhole = false;
-    //    nextFrame = 0;
-    //    frames = gameObject.GetComponentsInChildren<Frame>();
-    //}
     public override string ToString(){
         string ret = "";
         for(int i = 0; i < N; i++){
@@ -62,8 +52,8 @@ public class World : MonoBehaviour
             }
         }
         frames[nextFrame].drawBoard(frame, wormhole, cam.rect.width, N);
-        //Move frames[nextFrame] to on top of the frames[(nextFrame - 1) % 3]
         nextFrame = (nextFrame + 1) % 3;
+        //TODO: implement
     }
 
     public void Start()

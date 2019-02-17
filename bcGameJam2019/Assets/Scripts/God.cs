@@ -4,29 +4,23 @@ using UnityEngine;
 
 public class God : MonoBehaviour
 {
-    private World[] worlds;
-    public int N = 9;
+    public int N = 9; // NxN matrices
 
-    void launchNextFrame(){
+    private World[] worlds;
+
+    void launchNextFrame() {
         List<int[,]> boards = WorldGenerator.generateWorld(worlds, N);
         for(int i = 0; i < worlds.Length; i++){
             worlds[i].drawFrame(boards[i]);
         }
     }
-
-    // Start is called before the first frame update
-    void Start()
-    {
+    
+    void Start() {
         worlds = gameObject.GetComponentsInChildren<World>();
-        for(int i = 0; i < worlds.Length; i++){
+        for(int i = 0; i < worlds.Length; i++) {
             worlds[i].transform.localPosition = new Vector3(100*i, 0, 0);
         }
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-        //launchNextFrame();
-    }
+    
+    //TODO: when ready, call launchNextFrame
 }
