@@ -28,7 +28,7 @@ public class God : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //wait until ready
+        
         //launchNextFrame();
     }
 }
