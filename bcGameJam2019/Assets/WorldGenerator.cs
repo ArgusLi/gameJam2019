@@ -2,17 +2,8 @@ using System;
 using System.Collections.Generic;
 
 public class WorldGenerator{
-    public static List<int[,]> getWorldFrames(World[] worlds){
-        List<int[,]> ret = new List<int[,]>();
-        foreach(World world in worlds){
-            ret.Add(new int[world.N, world.N]);
-        }
-        return ret;
-    }
 
-
-
-    public class World{
+        public class World{
             public int N;
             public int[,] board;
             public char direction;
@@ -227,6 +218,35 @@ public class WorldGenerator{
 				}
             }
             return getWorldFrames(worlds);
+        }
+
+        private List<int[,]> getWorldFrames(World[] w){
+            List<int[,]> frames = new List<int[,]>
+            for(int i = 0; i < w.Length; i++){
+                if(w[i].direction == 'L'){
+                    frames.Add(rotate(w[i].board, 1, w[i].N));
+                }else if(w[i].direction == 'D'){
+                    frames.Add(rotate(w[i].board, 2, w[i].N));
+                }else if(w[i].direction == 'R'){
+                    frames.Add(rotate(w[i].board, 3, w[i].N));
+                }else{
+                    frames.Add(w[i].board);
+                }
+            }
+        }
+
+        private int[,] rotate(int[,] A, int num, int n){
+            for(int i = 0; i < num; i++){
+                for(int j = 0; j < n/2; j++){
+                    for(int k = 0; k < n - j - 1; k++){
+                        int temp = A[j, k];
+                        A[j, k] = A[n - 1 - k, j];
+                        A[n - 1 - k, j] = a[n - 1 - j, n - 1 - k];
+                        A[n - 1 - j, n - 1 - k] = a[k][n - 1 - j];
+                        a[k][n - 1 - j] = temp;
+                    }
+                }
+            }
         }
 
         static void fill(World world){
