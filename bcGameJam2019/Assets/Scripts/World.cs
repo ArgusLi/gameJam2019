@@ -117,6 +117,18 @@ public class World : MonoBehaviour
             rotateFactor = -90f;
         }
         cameraRB.rotation += rotateFactor;
+        if(Math.Abs(cameraRB.rotation) <1){
+            direction = 'U';
+        }
+        else if(Math.Abs(cameraRB.rotation - 90) <1){
+            direction = 'L';
+        }
+        else if(Math.Abs(cameraRB.rotation - 180) <1){
+            direction = 'D';
+        }
+        else if(Math.Abs(cameraRB.rotation - 270) <1){
+            direction = 'R';
+        }
     }
 
     public void Sync(){
