@@ -54,17 +54,18 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\Constants.cs" />
+     <Compile Include="Assets\Scripts\Deprecated\FrameJob.cs" />
+     <Compile Include="Assets\Scripts\Deprecated\ObstacleManager.cs" />
+     <Compile Include="Assets\Scripts\Deprecated\PowerupManager.cs" />
+     <Compile Include="Assets\Scripts\Deprecated\worldGenTest.cs" />
      <Compile Include="Assets\Scripts\EndCamera.cs" />
      <Compile Include="Assets\Scripts\endScore.cs" />
      <Compile Include="Assets\Scripts\Frame.cs" />
-     <Compile Include="Assets\Scripts\FrameJob.cs" />
      <Compile Include="Assets\Scripts\GameCamera.cs" />
      <Compile Include="Assets\Scripts\GamePowerup.cs" />
      <Compile Include="Assets\Scripts\GameShip.cs" />
      <Compile Include="Assets\Scripts\God.cs" />
      <Compile Include="Assets\Scripts\MainLevelBehaviour.cs" />
-     <Compile Include="Assets\Scripts\ObstacleManager.cs" />
-     <Compile Include="Assets\Scripts\PowerupManager.cs" />
      <Compile Include="Assets\Scripts\Scrolling.cs" />
      <Compile Include="Assets\Scripts\titleBackgroundScroll.cs" />
      <Compile Include="Assets\Scripts\titleButtonMoveUp.cs" />
