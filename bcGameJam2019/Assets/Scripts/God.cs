@@ -36,6 +36,11 @@ public class God : MonoBehaviour
 
     public void crash(float score, GameShip ship)
     {
+        if(ship != null)
+        {
+            runningScoreTotal += score;
+            StartCoroutine(LoadAfterDelay());
+        }
         runningScoreTotal += score;
         energy = 0;
         Constants.setEnergy(true);
@@ -48,11 +53,6 @@ public class God : MonoBehaviour
         UnityEngine.SceneManagement.SceneManager.LoadScene("End");
     }
 
-    void OnDisable()
-    {
-        PlayerPrefs.SetFloat("score", runningScoreTotal);
-    }
-    
     void Update()
     {
         for (int i = 0; i < worlds.Length; i++)
