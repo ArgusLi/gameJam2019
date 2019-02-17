@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System;
 using UnityEngine;
 
 public class World : MonoBehaviour
@@ -9,6 +10,7 @@ public class World : MonoBehaviour
     public List<int[,]> boards;
     public Frame[] frames;
     public Camera cam;
+    private Rigidbody2D cameraRB;
     public char direction;
     public int posX;
     public int posY;
@@ -66,6 +68,7 @@ public class World : MonoBehaviour
     {
         cam.transform.localPosition = new Vector3(0,0,-0.5f);
         frames = gameObject.GetComponentsInChildren<Frame>();
+        cameraRB = cam.GetComponent<Rigidbody2D>();
 
     }
 
@@ -78,11 +81,11 @@ public class World : MonoBehaviour
     public void Rotate(){
         enterWormhole();
         float rotateFactor = 90f;
-        Random r = new Random();
+        System.Random r = new System.Random();
         if(r.Next()%2 == 0){
             rotateFactor = -90f;
         }
-        cam.transform.rotation += rotateFactor;
+        cameraRB.rotation += rotateFactor;
     }
 
     public void Sync(){
@@ -95,16 +98,16 @@ public class World : MonoBehaviour
         this.direction = direction;
         switch(direction){
             case 'U':
-                cam.transform.rotation = 0f;
+                cameraRB.rotation = 0f;
             break;
             case 'D':
-                cam.transform.rotation = 180f;
+                cameraRB.rotation = 180f;
             break;
             case 'L':
-                cam.transform.rotation = 90f;
+                cameraRB.rotation = 90f;
             break;
             case 'R':
-                cam.transform.rotation = 270f;
+                cameraRB.rotation = 270f;
             break;
         }
         this.speed = speed;
