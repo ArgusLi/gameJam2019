@@ -357,16 +357,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 851740bf22d70474a8119c59e5d3ba01, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  N: 0
-  started: 0
-  frames: []
   cam: {fileID: 1783466675}
+  N: 0
   direction: 0
-  posX: 0
-  posY: 0
-  speed: 0
-  wormhole: 0
-  nextFrame: 0
 --- !u!1 &218994950
 GameObject:
   m_ObjectHideFlags: 0
@@ -578,6 +571,7 @@ MonoBehaviour:
   shipMoveSpeed: 3
   shipScrollSpeed: 0
   world: {fileID: 987235164}
+  god: {fileID: 1987239061}
   deltaTime: 0
 --- !u!50 &229357067
 Rigidbody2D:
@@ -852,6 +846,7 @@ MonoBehaviour:
   shipMoveSpeed: 3
   shipScrollSpeed: 0
   world: {fileID: 724704309}
+  god: {fileID: 1987239061}
   deltaTime: 0
 --- !u!50 &341246259
 Rigidbody2D:
@@ -1061,6 +1056,7 @@ MonoBehaviour:
   shipMoveSpeed: 3
   shipScrollSpeed: 0
   world: {fileID: 86084038}
+  god: {fileID: 1987239061}
   deltaTime: 0
 --- !u!50 &423979377
 Rigidbody2D:
@@ -1816,16 +1812,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 851740bf22d70474a8119c59e5d3ba01, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  N: 0
-  started: 0
-  frames: []
   cam: {fileID: 1651150274}
+  N: 0
   direction: 0
-  posX: 0
-  posY: 0
-  speed: 0
-  wormhole: 0
-  nextFrame: 0
 --- !u!1 &883284186
 GameObject:
   m_ObjectHideFlags: 0
@@ -2021,16 +2010,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 851740bf22d70474a8119c59e5d3ba01, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  N: 0
-  started: 0
-  frames: []
   cam: {fileID: 519420031}
+  N: 0
   direction: 0
-  posX: 0
-  posY: 0
-  speed: 0
-  wormhole: 0
-  nextFrame: 0
 --- !u!1 &1175690086
 GameObject:
   m_ObjectHideFlags: 0
@@ -2597,7 +2579,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.6200001, y: 3}
+    oldSize: {x: 2.15, y: 2.36}
     newSize: {x: 2.19, y: 2.35}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -2665,6 +2647,7 @@ MonoBehaviour:
   shipMoveSpeed: 3
   shipScrollSpeed: 0
   world: {fileID: 1855224526}
+  god: {fileID: 1987239061}
   deltaTime: 0
 --- !u!50 &1666694148
 Rigidbody2D:
@@ -3097,16 +3080,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 851740bf22d70474a8119c59e5d3ba01, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  N: 0
-  started: 0
-  frames: []
   cam: {fileID: 1175690087}
+  N: 0
   direction: 0
-  posX: 0
-  posY: 0
-  speed: 0
-  wormhole: 0
-  nextFrame: 0
 --- !u!1 &1987239060
 GameObject:
   m_ObjectHideFlags: 0

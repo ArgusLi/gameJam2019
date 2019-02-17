@@ -7,6 +7,7 @@ public class God : MonoBehaviour
     public int N = 9; // NxN matrices
 
     private World[] worlds;
+    private float runningScoreTotal;
 
     void launchNextFrame() {
         List<int[,]> boards = WorldGenerator.generateWorld(worlds, N);
