@@ -66,6 +66,7 @@ public class GameShip : MonoBehaviour
     }
 
     void crash(){
+        return;
         endTime = Time.unscaledTime;
         animator.SetBool("isTriggered", true);
         deltaTime = endTime - startTime;
