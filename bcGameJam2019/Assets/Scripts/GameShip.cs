@@ -9,6 +9,7 @@ public class GameShip : MonoBehaviour
     public Camera cam;
     public float shipMoveSpeed;
     public float shipScrollSpeed;
+    public World world;
 
     //private PowerUps powerUps;
     private Rigidbody2D shipRB;
@@ -89,43 +90,37 @@ public class GameShip : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D col)
     {
-        /*if (col.name == "obstacle")
+        if (col.name.Equals("obstacle"))
         {
-            endTime = Time.unscaledTime;
-            animator.SetBool("isTriggered", true);
-            deltaTime = endTime - startTime;
-            StartCoroutine(LoadAfterDelay());
+            // endTime = Time.unscaledTime;
+            // animator.SetBool("isTriggered", true);
+            // deltaTime = endTime - startTime;
+            // StartCoroutine(LoadAfterDelay());
         }
-        else if(col.name == "spin")
-        {*/
-        // int direction = -1;//powerUps.spin();  //  if direction is clockwise then -1, if anticlockwise then 1
-        // xaxis = Input.GetAxisRaw("Vertical") * shipMoveSpeed * direction;
-        // yaxis = Input.GetAxisRaw("Horizontal") * shipMoveSpeed + shipScrollSpeed * direction;
-        // Vector3 rotateValue = new Vector3(0, -90, 0);
-        // shipRB.transform.eulerAngles = transform.eulerAngles - rotateValue;
-        // // cameraRB.transform.eulerAngles = transform.eulerAngles - rotateValue; 
-        // cameraRB.rotation += 90f;
-        //}
-        /*else if (col.name == "swap")
-        {
-
+        else if(col.name.Equals("spin"))
+        {  
+            world.Rotate();
         }
-        else if (col.name == "sync2")
+        // else if (col.name.Equals("swap"))
+        // {
+        //     world.Swap();
+        // }
+        // else if (col.name.Equals("sync2"))
+        // {
+        //     world.sync();
+        // }
+        else if (col.name.Equals("sync4"))
         {
-
+            world.Sync();
         }
-        else if (col.name == "sync4")
+        else if (col.name.Equals("slow"))
         {
-
+            world.Slow();
         }
-        else if (col.name == "slow")
+        else if (col.name.Equals("boost"))
         {
-
+            world.Boost();
         }
-        else if (col.name == "boost")
-        {
-
-        }*/
 
     }
 

@@ -18,6 +18,9 @@ public class God : MonoBehaviour
     void Start()
     {
         worlds = gameObject.GetComponentsInChildren<World>();
+        for(int i = 0; i < worlds.Length; i++){
+            worlds[i].transform.localPosition = new Vector3(100*i, 0, 0);
+        }
 
         launchNextFrame();
     }
