@@ -69,6 +69,7 @@
     <Compile Include="Assets\Scripts\GamePowerup.cs" />
     <Compile Include="Assets\Scripts\GameShip.cs" />
     <Compile Include="Assets\Scripts\God.cs" />
+    <Compile Include="Assets\Scripts\leaderboardScores.cs" />
     <Compile Include="Assets\Scripts\MainLevelBehaviour.cs" />
     <Compile Include="Assets\Scripts\ObstacleManager.cs" />
     <Compile Include="Assets\Scripts\PowerupManager.cs" />
