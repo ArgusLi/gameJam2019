@@ -8,7 +8,9 @@ public class Frame : MonoBehaviour
 
     public GameObject asteroid1;
     public GameObject asteroid2;
+    public GameObject powerupTargets;
 
+    private Rigidbody2D[] powerups;
     private System.Random rand;
 
     private void drawAsteroid(float x, float y){
@@ -21,28 +23,34 @@ public class Frame : MonoBehaviour
             asteroid = GameObject.Instantiate(asteroid1, new Vector3(x, y, 0), Quaternion.identity, transform);
         }
         asteroid.transform.localPosition = new Vector3(x, y, 0);
+    }
 
+    private void drawPowerup(float x, float y){
+        GameObject powerup;
+        int i = rand.Next()%powerups.Length;
+        
+        powerup = GameObject.Instantiate(powerups[i].gameObject, new Vector3(x, y, 0), Quaternion.identity, transform);
+        
+        powerup.transform.localPosition = new Vector3(x, y, 0);
     }
 
     public void drawBoard(int[,] board, bool wormhole, float camWidth, int N){
         float unit = camWidth/(float)N;
         for(int r = N-1; r >= 0; r--){
             for(int c = 0; c < N; c++){
+                float x = unit*c;
+                float y =  unit*r;
                 switch(board[r, c]){
                     case 1:
-                        float x = unit*c;
-                        float y =  unit*r;
                         drawAsteroid(x, y);
                     break;
                     case 2:
                         if(wormhole){
-                            // Draw wormhole at 
-                            x = unit*c;
-                            y =  unit*r;
+                            // Draw wormhole at x, y
                         }
                     break;
                     case 3:
-                        // Draw Powerup
+                        drawAsteroid(x, y);
                     break;
                 }
             }
@@ -54,9 +62,7 @@ public class Frame : MonoBehaviour
     void Start()
     {
         rand = new System.Random();
-        // asteroids = gameObject.GetComponentsInChildren<Rigidbody2D>();
-        // drawAsteroid(0f,0f);
-
+        powerups = powerupTargets.gameObject.GetComponentsInChildren<Rigidbody2D>();
     }
 
 }
