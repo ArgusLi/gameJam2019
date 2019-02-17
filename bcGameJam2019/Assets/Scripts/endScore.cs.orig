@@ -1,0 +1,38 @@
+<<<<<<< HEAD:bcGameJam2019/Assets/endScore.cs
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using TMPro;
+
+public class endScore : MonoBehaviour
+{
+    public TextMeshProUGUI tm;
+    private float deltaTime;
+
+    void OnEnable()
+    {
+        deltaTime = PlayerPrefs.GetFloat("score");
+
+        int score = (int)deltaTime;
+        tm.SetText("Score: " + score.ToString());
+    }
+}
+=======
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using TMPro;
+
+public class endScore : MonoBehaviour
+{
+    public TextMeshProUGUI tm;
+    private float deltaTime;
+
+    void OnEnable()
+    {
+        deltaTime = PlayerPrefs.GetFloat("score");
+        int score = (int)deltaTime;
+        tm.SetText("Score: " + score.ToString());
+    }
+}
+>>>>>>> 9a5ff6282d6479f3111bc0a9c1a4bd708b884c19:bcGameJam2019/Assets/Scripts/endScore.cs
