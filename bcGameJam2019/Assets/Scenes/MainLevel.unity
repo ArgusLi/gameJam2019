@@ -263,6 +263,7 @@ MonoBehaviour:
   asteroid1: {fileID: 711643592}
   asteroid2: {fileID: 2077419381}
   powerupTargets: {fileID: 1769049774}
+  batteryTarget: {fileID: 0}
 --- !u!1 &77709459
 GameObject:
   m_ObjectHideFlags: 0
@@ -309,6 +310,7 @@ MonoBehaviour:
   asteroid1: {fileID: 711643592}
   asteroid2: {fileID: 2077419381}
   powerupTargets: {fileID: 1769049774}
+  batteryTarget: {fileID: 0}
 --- !u!1 &86084036
 GameObject:
   m_ObjectHideFlags: 0
@@ -722,6 +724,7 @@ MonoBehaviour:
   asteroid1: {fileID: 711643592}
   asteroid2: {fileID: 2077419381}
   powerupTargets: {fileID: 1769049774}
+  batteryTarget: {fileID: 0}
 --- !u!1 &341246255
 GameObject:
   m_ObjectHideFlags: 0
@@ -1618,6 +1621,7 @@ MonoBehaviour:
   asteroid1: {fileID: 711643592}
   asteroid2: {fileID: 2077419381}
   powerupTargets: {fileID: 1769049774}
+  batteryTarget: {fileID: 0}
 --- !u!1 &710903622
 GameObject:
   m_ObjectHideFlags: 0
@@ -1866,6 +1870,7 @@ MonoBehaviour:
   asteroid1: {fileID: 711643592}
   asteroid2: {fileID: 2077419381}
   powerupTargets: {fileID: 1769049774}
+  batteryTarget: {fileID: 0}
 --- !u!1 &724704307
 GameObject:
   m_ObjectHideFlags: 0
@@ -1964,6 +1969,7 @@ MonoBehaviour:
   asteroid1: {fileID: 711643592}
   asteroid2: {fileID: 2077419381}
   powerupTargets: {fileID: 1769049774}
+  batteryTarget: {fileID: 0}
 --- !u!1 &918243276
 GameObject:
   m_ObjectHideFlags: 0
@@ -2362,6 +2368,7 @@ MonoBehaviour:
   asteroid1: {fileID: 711643592}
   asteroid2: {fileID: 2077419381}
   powerupTargets: {fileID: 1769049774}
+  batteryTarget: {fileID: 0}
 --- !u!1 &1462122763
 GameObject:
   m_ObjectHideFlags: 0
@@ -2440,6 +2447,7 @@ MonoBehaviour:
   asteroid1: {fileID: 711643592}
   asteroid2: {fileID: 2077419381}
   powerupTargets: {fileID: 1769049774}
+  batteryTarget: {fileID: 0}
 --- !u!1 &1559152229
 GameObject:
   m_ObjectHideFlags: 0
@@ -2451,7 +2459,6 @@ GameObject:
   - component: {fileID: 1559152230}
   - component: {fileID: 1559152232}
   - component: {fileID: 1559152231}
-  - component: {fileID: 1559152233}
   m_Layer: 0
   m_Name: boost_rock
   m_TagString: boost
@@ -2542,18 +2549,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1559152233
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1559152229}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c747dcb006d6f46b6820fc1327901afc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1642554102
 GameObject:
   m_ObjectHideFlags: 0
@@ -2600,6 +2595,7 @@ MonoBehaviour:
   asteroid1: {fileID: 711643592}
   asteroid2: {fileID: 2077419381}
   powerupTargets: {fileID: 1769049774}
+  batteryTarget: {fileID: 0}
 --- !u!1 &1651150273
 GameObject:
   m_ObjectHideFlags: 0
@@ -2975,6 +2971,7 @@ MonoBehaviour:
   asteroid1: {fileID: 711643592}
   asteroid2: {fileID: 2077419381}
   powerupTargets: {fileID: 1769049774}
+  batteryTarget: {fileID: 0}
 --- !u!1 &1769049774
 GameObject:
   m_ObjectHideFlags: 0
@@ -3376,6 +3373,7 @@ MonoBehaviour:
   asteroid1: {fileID: 711643592}
   asteroid2: {fileID: 2077419381}
   powerupTargets: {fileID: 1769049774}
+  batteryTarget: {fileID: 0}
 --- !u!1 &2073065904
 GameObject:
   m_ObjectHideFlags: 0
@@ -3422,6 +3420,7 @@ MonoBehaviour:
   asteroid1: {fileID: 711643592}
   asteroid2: {fileID: 2077419381}
   powerupTargets: {fileID: 1769049774}
+  batteryTarget: {fileID: 0}
 --- !u!1 &2077419381
 GameObject:
   m_ObjectHideFlags: 0
