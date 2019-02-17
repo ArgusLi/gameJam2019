@@ -8,11 +8,11 @@ public class Frame : MonoBehaviour
     Rigidbody2D[] asteroids;
 
     private void drawAsteroid(float x, float y){
-        GameObject asteroid = gameObject.Instantiate(asteroids[0].gameObject, new Vector3(x, y, 0), Quaternion.identity, transform);
+        // GameObject asteroid = gameObject.Instantiate(asteroids[0].gameObject, new Vector3(x, y, 0), Quaternion.identity, transform);
 
     }
 
-    public void drawBoard(List<int[,]> board, bool wormhole){
+    public void drawBoard(int[,] board, bool wormhole){
         // float unit = cams[0].orthographicSize*2/(float)N;
         // for(int i = 0; i < numWorlds; i++){
         //     for(int r = N-1; r >= 0; r--){

@@ -47,7 +47,7 @@ public class World : MonoBehaviour
         return ret;
     }
     public void drawFrame(int[,] board){
-        int[,] frame = [speed * N, N];
+        int[,] frame = new int[speed * N, N];
         for (int i = 0; i < N; i++)
         {
             for (int j = 0; j < N; j++)
@@ -58,10 +58,10 @@ public class World : MonoBehaviour
                 }
             }
         }
-        frames[nextFrame].drawBoard(frame);
+        frames[nextFrame].drawBoard(board, wormhole);
         //Move frames[nextFrame] to on top of the frames[(nextFrame - 1) % 3]
         nextFrame = (nextFrame + 1) % 3;
-        }
     }
 }
+
 
