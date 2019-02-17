@@ -5,7 +5,7 @@ using TMPro;
 
 public class endScore : MonoBehaviour
 {
-    public TextMeshPro tm;
+    public TextMeshProUGUI tm;
     private float deltaTime;
 
     void OnEnable()
