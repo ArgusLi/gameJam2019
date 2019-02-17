@@ -7,7 +7,6 @@ public class WorldGenerator{
         int N = n;
         World[] worlds = w;
         for(int i = 0; i < worlds.Length; i++){
-            worlds[i] = new World(N);
             fill(worlds[i]);
         }
 

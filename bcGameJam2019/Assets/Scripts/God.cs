@@ -5,7 +5,7 @@ using UnityEngine;
 public class God : MonoBehaviour
 {
     private World[] worlds;
-    private int N = 9;
+    public int N = 9;
 
     void launchNextFrame(){
         List<int[,]> boards = WorldGenerator.generateWorld(worlds, N);

@@ -6,6 +6,7 @@ using UnityEngine;
 public class World : MonoBehaviour
 {
     public int N;
+    public bool started;
     public int[,] board;
     public List<int[,]> boards;
     public Frame[] frames;
@@ -18,16 +19,17 @@ public class World : MonoBehaviour
     public bool wormhole;
     public int nextFrame;
 
-    public World(int n){
-        N = n;
-        board = new int[N, N];
-        direction = 'U';
-        posX = N/2;
-        posY = N/2;
-        speed = 2;
-        wormhole = false;
-        nextFrame = 0;
-    }
+    //public World(int n){
+    //    N = n;
+    //    board = new int[N, N];
+    //    direction = 'U';
+    //    posX = N/2;
+    //    posY = N/2;
+    //    speed = 2;
+    //    wormhole = false;
+    //    nextFrame = 0;
+    //    frames = gameObject.GetComponentsInChildren<Frame>();
+    //}
     public override string ToString(){
         string ret = "";
         for(int i = 0; i < N; i++){
@@ -66,16 +68,25 @@ public class World : MonoBehaviour
 
     public void Start()
     {
+        Debug.Log("Hello");
         cam.transform.localPosition = new Vector3(0,0,-0.5f);
+        N = transform.parent.gameObject.GetComponent<God>().N;
+        board = new int[N, N];
+        direction = 'U';
+        posX = N / 2;
+        posY = N / 2;
+        speed = 2;
+        wormhole = false;
+        nextFrame = 0;
         frames = gameObject.GetComponentsInChildren<Frame>();
         cameraRB = cam.GetComponent<Rigidbody2D>();
-
+        started = false;
     }
 
     public void enterWormhole(){
         wormhole = true;
 
-        //TODO::ship and frame dissapear
+        //TODO::ship and frame disappear
     }
 
     public void Rotate(){
