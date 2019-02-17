@@ -14,6 +14,7 @@ public enum QuadPos
 public class World : MonoBehaviour
 {
     public Camera cam;
+    public Rigidbody2D shipRB;
     public int[,] board;
     public int N;
     public char direction;
@@ -103,9 +104,13 @@ public class World : MonoBehaviour
         started = false;
     }
 
+    public void exitWormHole(){
+        
+    }
+
     public void enterWormhole(){
         wormhole = true;
-
+        shipRB.position = new Vector2(999, 999);
         //TODO::ship and frame disappear
     }
 
