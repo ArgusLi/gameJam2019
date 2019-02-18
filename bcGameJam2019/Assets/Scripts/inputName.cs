@@ -11,6 +11,7 @@ public class inputName : MonoBehaviour
 
     void OnDisable()
     {
+        playername = tm.text;
         PlayerPrefs.SetString("playername", playername);
     }
 }

@@ -7,15 +7,15 @@ using System;
 public class leaderboardScores : MonoBehaviour
 {
     public TextMeshProUGUI[] tm = new TextMeshProUGUI[10];
-    private string[] leaderboard = new string[11];
     private float deltaTime;
     private string player;
     private char[] alphabet = new char[53];
     private int[] localscore = new int[11];
+    private string[] localname = new string[11];
 
     private void OnEnable()
     {
-
+        bool flag = false;
         string alphabetString = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ ";
         alphabet = alphabetString.ToCharArray();
 
@@ -26,20 +26,21 @@ public class leaderboardScores : MonoBehaviour
 
         for (int i = 0; i<10; i++)
         {
-
-            leaderboard[i] = tm[i].text;
-            leaderboard[i].Trim(alphabet);
-            bool success = Int32.TryParse(tm[i].text, out localscore[i]);
-            if (success == false) { localscore[i] = 0; }
+            localname[i] = PlayerPrefs.GetString("playernames"+i);
+            localscore[i] = PlayerPrefs.GetInt("playerscores" + i);
+            if (localscore[i] < score && localscore[i + 1] < score && flag == false)
+            {
+                localname[i] = player;
+                localscore[i] = score;
+                flag = true;
+            }
         }
         for (int i = 0; i < 10; i++)
         {
-            if(localscore[i] <= score && localscore[i+1] < score)
-            {
-                tm[i].SetText(player + " highscore: " + score.ToString());
-                break;
-            }
-
+            tm[i].SetText("Player:" + localname[i] +", "+ " highscore: " + localscore[i]);
+            PlayerPrefs.SetString("playernames" + i, localname[i]);
+            PlayerPrefs.SetInt("playerscores" + i, localscore[i]);
         }
     }
+
 }
