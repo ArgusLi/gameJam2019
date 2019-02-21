@@ -1,13 +1,15 @@
 using System;
 using System.Collections.Generic;
+using UnityEngine;
 
 public class WorldGenerator{
 
     public static List<int[,]> generateWorld(World[] w, int n){
+        System.Random r = new System.Random();
         int N = n;
         World[] worlds = w;
         for(int i = 0; i < worlds.Length; i++){
-            fill(worlds[i]);
+            fill(worlds[i], r);
         }
 
 
@@ -16,7 +18,6 @@ public class WorldGenerator{
         for(int i = 0; i < N; i++){
             moves.Add('N');
         }
-        Random r = new Random();
         int lefts = r.Next(N);
         int ups = r.Next(N);
         for(int i = 0; i < lefts; i++){
@@ -183,6 +184,17 @@ public class WorldGenerator{
         return getWorldFrames(worlds);
     }
 
+    //For test purposes only
+    static int boardSum(int[,] board){
+        int sum = 0;
+        for(int i = 0; i < board.GetLength(0); i++){
+            for(int j = 0; j < board.GetLength(1); j++){
+                sum += board[i,j];
+            }
+        }
+        return sum;
+    }
+
     private static List<int[,]> getWorldFrames(World[] w){
         List<int[,]> frames = new List<int[,]>();
         for(int i = 0; i < w.Length; i++){
@@ -195,6 +207,9 @@ public class WorldGenerator{
             }else{
                 frames.Add(w[i].board);
             }
+        }
+        foreach(int[,] board in frames){
+            Debug.Log(boardSum(board));
         }
         return frames;
     }
@@ -214,8 +229,7 @@ public class WorldGenerator{
         return A;
     }
 
-    static void fill(World world){
-        Random r = new Random();
+    static void fill(World world, System.Random r){
         for(int i = 0; i < world.board.GetLength(0); i++){
             for(int j = 0; j < world.board.GetLength(1); j++){
                 world.board[i, j] = 1;

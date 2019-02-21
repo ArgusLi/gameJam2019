@@ -77,27 +77,26 @@ public class GameShip : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D col)
     {
-        crash();
-        if (col.CompareTag("obstacle"))
-        {
-            crash();
-        }
-        else if(col.CompareTag("spin"))
-        {  
-            world.Rotate();
-        }
-        else if (col.CompareTag("sync4"))
-        {
-            world.Sync();
-        }
-        else if (col.CompareTag("slow"))
-        {
-            world.Slow();
-        }
-        else if (col.CompareTag("boost"))
-        {
-            world.Boost();
-        }
+        // if (col.CompareTag("obstacle"))
+        // {
+        //     crash();
+        // }
+        // else if(col.CompareTag("spin"))
+        // {  
+        //     world.Rotate();
+        // }
+        // else if (col.CompareTag("sync4"))
+        // {
+        //     world.Sync();
+        // }
+        // else if (col.CompareTag("slow"))
+        // {
+        //     world.Slow();
+        // }
+        // else if (col.CompareTag("boost"))
+        // {
+        //     world.Boost();
+        // }
 
     }
 

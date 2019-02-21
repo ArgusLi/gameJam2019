@@ -12,10 +12,24 @@ public class God : MonoBehaviour
     private GameShip crashed;
     private bool readyToRevive;
 
+    //For test purposes only
+    int boardSum(int[,] board){
+        int sum = 0;
+        for(int i = 0; i < N; i++){
+            for(int j = 0; j < N; j++){
+                sum += board[i,j];
+            }
+        }
+        return sum;
+    }
+
     void launchNextFrame()
     {
-        Debug.Log("Calling God.launchNextFrame");
+        // Debug.Log("Calling God.launchNextFrame");
         List<int[,]> boards = WorldGenerator.generateWorld(worlds, N);
+        // foreach(int[,] board in boards){
+        //     Debug.Log(boardSum(board));
+        // }
         for (int i = 0; i < worlds.Length; i++)
         {
             worlds[i].drawFrame(boards[i]);
@@ -24,7 +38,7 @@ public class God : MonoBehaviour
 
     void Start()
     {
-        Debug.Log("Calling God.Start");
+        // Debug.Log("Calling God.Start");
         worlds = gameObject.GetComponentsInChildren<World>();
         for (int i = 0; i < worlds.Length; i++)
         {

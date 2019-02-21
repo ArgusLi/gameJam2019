@@ -17,6 +17,7 @@ public class Frame : MonoBehaviour
     
     private List<GameObject> asteroids;
     private List<GameObject> powerups;
+    private List<GameObject> gameObjects;
     private Vector3 scale;
 
     private void drawAsteroid(float x, float y) {
@@ -30,6 +31,7 @@ public class Frame : MonoBehaviour
         asteroid.transform.localPosition = new Vector3(x, y, 0);
         asteroid.transform.localScale = scale;
         asteroids.Add(asteroid);
+        gameObjects.Add(asteroid);
     }
 
     private void drawPowerup(float x, float y) {
@@ -50,11 +52,15 @@ public class Frame : MonoBehaviour
         powerup.transform.localPosition = new Vector3(x, y, 0);
         powerup.transform.localScale = scale;
         powerups.Add(powerup);
-        
+        gameObjects.Add(powerup);
     }
 
     public void drawBoard(int[,] board, bool wormhole, float camWidth, int N){
         //Debug.Log("Calling Frame.drawBoard");
+        foreach (GameObject GO in gameObjects){
+            Destroy(GO);
+        }
+        gameObjects.RemoveRange(0, gameObjects.Count);
         asteroids = new List<GameObject>();
         powerups = new List<GameObject>();
         float unit = 40 * camWidth/(float)N;
@@ -77,7 +83,6 @@ public class Frame : MonoBehaviour
                 }
             }
         }
-
     }
     
     public Vector2 getPosition() {
@@ -93,10 +98,11 @@ public class Frame : MonoBehaviour
     }
 
     void Awake() {
-        Debug.Log("Calling Frame.Awake");
+        // Debug.Log("Calling Frame.Awake");
         rand = new System.Random();
         asteroids = new List<GameObject>();
         powerups = new List<GameObject>();
+        gameObjects = new List<GameObject>();
         powerupBodies = powerupTargets.gameObject.GetComponentsInChildren<Rigidbody2D>();
         frameRB = gameObject.AddComponent<Rigidbody2D>();
         frameRB.isKinematic = true;

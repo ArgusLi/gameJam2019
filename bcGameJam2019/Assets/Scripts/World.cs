@@ -81,14 +81,14 @@ public class World : MonoBehaviour
         }
         frames[nextFrame].setPosition(new Vector2(cameraRB.position.x, cameraRB.position.y+10));
         frames[nextFrame].drawBoard(frame, wormhole, cam.rect.width, N);
-        frames[nextFrame].setVelocity(new Vector2(0, -4)); //CHANGE
+        frames[nextFrame].setVelocity(new Vector2(0, -2)); //CHANGE
         
         nextFrame = (nextFrame + 1) % 3;
     }
 
     public void Awake()
     {
-        Debug.Log("Calling World.Awake");
+        // Debug.Log("Calling World.Awake");
         cam.transform.localPosition = new Vector3(0,0,-0.5f);
         N = transform.parent.gameObject.GetComponent<God>().N;
         board = new int[N, N];
