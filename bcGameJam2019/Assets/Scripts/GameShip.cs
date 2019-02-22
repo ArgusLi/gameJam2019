@@ -61,43 +61,63 @@ public class GameShip : MonoBehaviour
     }
 
     void crash(){
-        if(Constants.getEnergy() == true)
         endTime = Time.unscaledTime;
         animator.SetBool("isTriggered", true);
         deltaTime = endTime - startTime;
         god.crash(deltaTime, this);
-        Constants.setEnergy(true);
-        this.transform.position = new Vector3(999, 999, 0);
+
+        StartCoroutine(waitThenTeleport());
     }
 
     public void respawn(){
         startTime = Time.unscaledTime;
-        this.transform.position = new Vector3(0, 0, 0);
+        this.transform.localPosition = new Vector3(0, 0, 0);
     }
 
     void OnTriggerEnter2D(Collider2D col)
     {
-        // if (col.CompareTag("obstacle"))
-        // {
-        //     crash();
-        // }
-        // else if(col.CompareTag("spin"))
-        // {  
-        //     world.Rotate();
-        // }
-        // else if (col.CompareTag("sync4"))
-        // {
-        //     world.Sync();
-        // }
-        // else if (col.CompareTag("slow"))
-        // {
-        //     world.Slow();
-        // }
-        // else if (col.CompareTag("boost"))
-        // {
-        //     world.Boost();
-        // }
+        if(Time.unscaledTime - startTime < 2){
+            Debug.Log("Saved by iframes");
+            return;
+        }
 
+        Debug.Log("Collided with "+col.tag);
+        if (col.CompareTag("obstacle"))
+        {
+            crash();
+        }
+        else if(col.CompareTag("spin"))
+        {  
+            // world.Rotate();
+        }
+        else if (col.CompareTag("sync4"))
+        {
+            // world.Sync();
+        }
+        else if (col.CompareTag("slow"))
+        {
+            // world.Slow();
+        }
+        else if (col.CompareTag("boost"))
+        {
+            // world.Boost();
+        }
+        else if (col.CompareTag("battery"))
+        {
+            god.CollectEnergy();
+        }
+        else if (col.CompareTag("wormhole"))
+        {
+            // placeholder if needed
+        }
+
+    }
+
+    IEnumerator waitThenTeleport(){
+        yield return new WaitForSecondsRealtime(1);
+        this.transform.position = new Vector3(999, 999, 0);
+        
+        animator.SetBool("isTriggered", false);
     }
 
     

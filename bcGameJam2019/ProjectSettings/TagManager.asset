@@ -11,6 +11,7 @@ TagManager:
   - sync4
   - battery
   - obstacle
+  - wormhole
   layers:
   - Default
   - TransparentFX

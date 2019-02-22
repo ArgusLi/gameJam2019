@@ -61,6 +61,7 @@ public class Frame : MonoBehaviour
             Destroy(GO);
         }
         gameObjects.RemoveRange(0, gameObjects.Count);
+        
         asteroids = new List<GameObject>();
         powerups = new List<GameObject>();
         float unit = 40 * camWidth/(float)N;

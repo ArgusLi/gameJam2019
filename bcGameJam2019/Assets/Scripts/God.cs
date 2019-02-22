@@ -8,8 +8,9 @@ public class God : MonoBehaviour
 
     private World[] worlds;
     private float runningScoreTotal;
+    private float energyClockStart;
     private int energy;
-    private GameShip crashed;
+    private List<GameShip> crashed;
     private bool readyToRevive;
 
     //For test purposes only
@@ -44,23 +45,20 @@ public class God : MonoBehaviour
         {
             worlds[i].transform.localPosition = new Vector3(100 * i+100, 0, 0);
         }
-        crashed = null;
-        readyToRevive = false;
+        crashed = new List<GameShip>();
     }
 
     //TODO: when ready, call launchNextFrame
 
     public void crash(float score, GameShip ship)
     {
-        if(ship != null)
-        {
-            runningScoreTotal += score;
-            StartCoroutine(LoadAfterDelay());
+        runningScoreTotal += score;    
+        if(Constants.getEnergy() == false){
+            energy = 0;
+            energyClockStart = Time.unscaledTime;
+            Constants.setEnergy(true);
         }
-        runningScoreTotal += score;
-        energy = 0;
-        Constants.setEnergy(true);
-        crashed = ship;
+        crashed.Add(ship);
     }
 
     IEnumerator LoadAfterDelay()
@@ -71,6 +69,15 @@ public class God : MonoBehaviour
 
     void Update()
     {
+        // run out of time on energy meter
+        if(Constants.getEnergy() && Time.unscaledTime-energyClockStart > 30){
+            // launch end scene
+            UnityEngine.SceneManagement.SceneManager.LoadScene("End");
+
+            // load end scene after 1s delay
+            // StartCoroutine(LoadAfterDelay());
+        }
+
         for (int i = 0; i < worlds.Length; i++)
         {
             if (!worlds[i].ReadyToDraw())
@@ -79,25 +86,26 @@ public class God : MonoBehaviour
             }
         }
         launchNextFrame();
-        if (readyToRevive) {
-            Revive();
-        }
     }
 
-    void CollectEnergy()
+    public void CollectEnergy()
     {
         energy++;
+        // TODO:: Update energy bar
+
         if(energy >= 3)
         {
-            readyToRevive = true;
+            Constants.setEnergy(false);
+            Revive();
+            // TODO:: Remove energy bar from screen after brief delay
         }
     }
 
     void Revive()
     {
-        Constants.setEnergy(false);
-        //wait for frame change
-        crashed.respawn();
+        foreach(GameShip ship in crashed){
+            ship.respawn();
+        }
     }
 
 

@@ -8,6 +8,7 @@ public class UIScript : MonoBehaviour
 
     public void nextLevel()
     {
+        Constants.setEnergy(false);
         UnityEngine.SceneManagement.SceneManager.LoadScene("MainLevel");
     }
     public void titleScreen()

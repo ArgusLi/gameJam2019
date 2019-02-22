@@ -208,9 +208,6 @@ public class WorldGenerator{
                 frames.Add(w[i].board);
             }
         }
-        foreach(int[,] board in frames){
-            Debug.Log(boardSum(board));
-        }
         return frames;
     }
 
